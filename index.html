@@ -219,6 +219,54 @@ footer{background:var(--ink);padding:22px 8%;display:flex;align-items:center;jus
 .ripple-wave{position:absolute;border-radius:50%;background:rgba(255,255,255,.35);transform:scale(0);animation:ripple-anim .55s linear;pointer-events:none;}
 @keyframes ripple-anim{to{transform:scale(4);opacity:0;}}
 
+/* PUMP SELECTOR */
+.pump-selector{background:var(--white);padding:80px 8%;border-top:1px solid var(--border);}
+.ps-header{text-align:center;margin-bottom:40px;}
+.ps-wrap{max-width:720px;margin:0 auto;}
+.ps-step{display:none;}
+.ps-step.active{display:block;}
+.ps-progress{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:36px;}
+.ps-prog-dot{width:28px;height:28px;border-radius:50%;border:2px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--ink3);transition:all .3s;position:relative;z-index:1;}
+.ps-prog-dot.done{background:var(--red);border-color:var(--red);color:#fff;}
+.ps-prog-dot.current{background:var(--ink);border-color:var(--ink);color:#fff;}
+.ps-prog-line{flex:1;height:2px;background:var(--border);max-width:80px;transition:background .3s;}
+.ps-prog-line.done{background:var(--red);}
+.ps-step-label{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--ink3);margin-bottom:10px;}
+.ps-step-question{font-family:'DM Serif Display',serif;font-size:clamp(20px,2.5vw,26px);color:var(--ink);line-height:1.2;margin-bottom:28px;}
+.ps-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.ps-opt{border:2px solid var(--border);border-radius:3px;padding:18px 16px;cursor:pointer;background:var(--cream);transition:all .2s;display:flex;align-items:flex-start;gap:12px;}
+.ps-opt:hover{border-color:var(--ink2);background:var(--warm);}
+.ps-opt.selected{border-color:var(--red);background:#fff5f5;}
+.ps-opt-icon{width:36px;height:36px;border-radius:50%;background:var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ps-opt-icon svg{width:18px;height:18px;stroke:var(--ink2);fill:none;stroke-width:1.5;}
+.ps-opt.selected .ps-opt-icon{background:var(--red);}
+.ps-opt.selected .ps-opt-icon svg{stroke:#fff;}
+.ps-opt-body{}
+.ps-opt-label{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.ps-opt-sub{font-size:11px;color:var(--ink3);line-height:1.4;}
+.ps-nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;}
+.ps-btn-back{font-size:13px;color:var(--ink3);border:none;background:none;cursor:pointer;padding:8px 0;font-family:'Outfit',sans-serif;}
+.ps-btn-back:hover{color:var(--ink);}
+.ps-btn-next{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:12px 28px;border-radius:2px;font-size:14px;font-weight:600;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;}
+.ps-btn-next:hover{background:var(--red);}
+.ps-btn-next:disabled{opacity:.35;cursor:not-allowed;}
+.ps-result{display:none;text-align:center;}
+.ps-result.active{display:block;}
+.ps-result-badge{display:inline-flex;align-items:center;gap:8px;background:var(--water);color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;}
+.ps-result-type{font-family:'DM Serif Display',serif;font-size:clamp(22px,3vw,32px);color:var(--ink);line-height:1.2;margin-bottom:8px;}
+.ps-result-model{font-size:15px;font-weight:700;color:var(--red);margin-bottom:6px;}
+.ps-result-note{font-size:13px;color:var(--ink3);line-height:1.7;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto;}
+.ps-result-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;padding:24px 28px;margin-bottom:24px;text-align:left;}
+.ps-result-card-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.ps-result-card-row:last-child{border-bottom:none;}
+.ps-result-card-key{color:var(--ink3);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
+.ps-result-card-val{color:var(--ink);font-weight:600;}
+.ps-result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.btn-ps-wa{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff;padding:14px 28px;border-radius:2px;font-size:14px;font-weight:700;transition:opacity .2s;}
+.btn-ps-wa:hover{opacity:.9;}
+.btn-ps-reset{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--border);color:var(--ink2);background:var(--white);padding:14px 22px;border-radius:2px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Outfit',sans-serif;transition:border-color .2s;}
+.btn-ps-reset:hover{border-color:var(--ink2);}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   .about-grid,.contact-grid{grid-template-columns:1fr;gap:32px;}
@@ -239,6 +287,8 @@ footer{background:var(--ink);padding:22px 8%;display:flex;align-items:center;jus
 }
 @media(max-width:540px){
   .sol-cards{grid-template-columns:repeat(2,1fr);}
+  .ps-options{grid-template-columns:1fr;}
+  .ps-result-card-row{flex-direction:column;align-items:flex-start;gap:4px;}
 }
 </style>
 </head>
@@ -250,7 +300,7 @@ footer{background:var(--ink);padding:22px 8%;display:flex;align-items:center;jus
 </a>
 
 <!-- FLOAT: Pump Guide -->
-<a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="float-pg ripple-btn" aria-label="Smart Pump Guidance">
+<a href="#pump-selector" class="float-pg ripple-btn" aria-label="Smart Pump Guidance">
   <svg width="14" height="14" viewBox="0 0 60 80" fill="white"><path d="M30 4C30 4 8 32 8 50A22 22 0 0 0 52 50C52 32 30 4 30 4Z"/></svg>
   <span>Pump Guide</span>
 </a>
@@ -263,6 +313,7 @@ footer{background:var(--ink);padding:22px 8%;display:flex;align-items:center;jus
   </a>
   <ul class="nav-links">
     <li><a href="#solutions">Solutions</a></li>
+    <li><a href="#pump-selector">Pump Selector</a></li>
     <li><a href="#service-centre">Service</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -272,7 +323,7 @@ footer{background:var(--ink);padding:22px 8%;display:flex;align-items:center;jus
       <span class="ndb-label">Authorized</span>
       <span class="ndb-brands">Texmo · Aquatex</span>
     </div>
-    <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="nav-cta ripple-btn">Pump Guide →</a>
+    <a href="#pump-selector" class="nav-cta ripple-btn">Pump Selector →</a>
   </div>
 </nav>
 
@@ -296,7 +347,7 @@ footer{background:var(--ink);padding:22px 8%;display:flex;align-items:center;jus
     <div class="hero-rule"></div>
     <p class="hero-desc">Trusted Water Solutions · Authorized Aqua Group (Texmo · Aquatex) Dealer &amp; Service Centre · Serving Thanjavur Since 1966</p>
     <div class="hero-btns">
-      <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" rel="noopener" class="btn-hero-primary ripple-btn">Find the Right Pump →</a>
+      <a href="#pump-selector" class="btn-hero-primary ripple-btn">Find the Right Pump →</a>
       <a href="https://wa.me/919865868623?text=Hi%2C+I%27d+like+a+quote." target="_blank" class="btn-hero-wa ripple-btn">WhatsApp Quote</a>
     </div>
     <div class="hero-creds">
@@ -351,7 +402,7 @@ footer{background:var(--ink);padding:22px 8%;display:flex;align-items:center;jus
       <h2 class="pc-title">Not sure which pump<br><em>is right for you?</em></h2>
       <p class="pc-desc">Answer a few questions about your water source, depth and use. Our smart tool — built on 60 years of field knowledge from Thanjavur — gives you the right recommendation instantly.</p>
       <div class="pc-btns">
-        <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" rel="noopener" class="btn-pump-guide ripple-btn">Try Smart Pump Guidance →</a>
+        <a href="#pump-selector" class="btn-pump-guide ripple-btn">Try the Pump Selector →</a>
         <span class="pc-note">Opens in a new tab · No sign-up needed</span>
       </div>
     </div>
@@ -411,6 +462,155 @@ footer{background:var(--ink);padding:22px 8%;display:flex;align-items:center;jus
       </div>
     </div>
     <div class="sol-closing reveal">Everything required for a complete working water system — under one roof.</div>
+  </div>
+</section>
+
+<!-- PUMP SELECTOR TOOL -->
+<section id="pump-selector" class="pump-selector">
+  <div class="ps-header reveal">
+    <div class="eyebrow">Find the Right Pump · Free · 2 Minutes</div>
+    <h2 class="sec-title">Which pump is <em>right for you?</em></h2>
+    <p class="sec-sub">Answer 4 simple questions. Get a personalised pump recommendation — built on 60 years of field knowledge from Thanjavur.</p>
+  </div>
+  <div class="ps-wrap">
+    <!-- PROGRESS -->
+    <div class="ps-progress" id="ps-progress">
+      <div class="ps-prog-dot current" id="pd-1">1</div>
+      <div class="ps-prog-line" id="pl-1"></div>
+      <div class="ps-prog-dot" id="pd-2">2</div>
+      <div class="ps-prog-line" id="pl-2"></div>
+      <div class="ps-prog-dot" id="pd-3">3</div>
+      <div class="ps-prog-line" id="pl-3"></div>
+      <div class="ps-prog-dot" id="pd-4">4</div>
+    </div>
+
+    <!-- STEP 1: Water Source -->
+    <div class="ps-step active" id="ps-step-1">
+      <div class="ps-step-label">Step 1 of 4</div>
+      <div class="ps-step-question">What is your water source?</div>
+      <div class="ps-options">
+        <div class="ps-opt" data-step="1" data-val="borewell">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><path d="M7 6h10M8 10h8M9 14h6"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Borewell</div><div class="ps-opt-sub">Drilled borewell · Deep water table</div></div>
+        </div>
+        <div class="ps-opt" data-step="1" data-val="openwell">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Open Well</div><div class="ps-opt-sub">Ring well · Sump · Open water source</div></div>
+        </div>
+        <div class="ps-opt" data-step="1" data-val="muni">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="11" rx="1"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Municipality / Tank</div><div class="ps-opt-sub">City supply · Overhead / sump tank</div></div>
+        </div>
+        <div class="ps-opt" data-step="1" data-val="surface">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><path d="M2 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/><path d="M2 18c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Surface Water</div><div class="ps-opt-sub">Canal · River · Pond · Stream</div></div>
+        </div>
+      </div>
+      <div class="ps-nav">
+        <span></span>
+        <button class="ps-btn-next" id="ps-next-1" disabled>Next →</button>
+      </div>
+    </div>
+
+    <!-- STEP 2: Depth -->
+    <div class="ps-step" id="ps-step-2">
+      <div class="ps-step-label">Step 2 of 4</div>
+      <div class="ps-step-question">What is the depth of your water source?</div>
+      <div class="ps-options">
+        <div class="ps-opt" data-step="2" data-val="shallow">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="12"/><polyline points="8 9 12 5 16 9"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Up to 20 ft</div><div class="ps-opt-sub">Very shallow · Surface level</div></div>
+        </div>
+        <div class="ps-opt" data-step="2" data-val="medium">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="14"/><polyline points="8 10 12 14 16 10"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">20 – 50 ft</div><div class="ps-opt-sub">Moderate depth</div></div>
+        </div>
+        <div class="ps-opt" data-step="2" data-val="deep">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="16"/><polyline points="8 12 12 16 16 12"/><line x1="8" y1="20" x2="16" y2="20"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">50 – 150 ft</div><div class="ps-opt-sub">Deep borewell range</div></div>
+        </div>
+        <div class="ps-opt" data-step="2" data-val="verydeep">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="18"/><polyline points="7 13 12 18 17 13"/><line x1="7" y1="21" x2="17" y2="21"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">150 ft +</div><div class="ps-opt-sub">Very deep borewell</div></div>
+        </div>
+      </div>
+      <div class="ps-nav">
+        <button class="ps-btn-back" id="ps-back-2">← Back</button>
+        <button class="ps-btn-next" id="ps-next-2" disabled>Next →</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: Use -->
+    <div class="ps-step" id="ps-step-3">
+      <div class="ps-step-label">Step 3 of 4</div>
+      <div class="ps-step-question">What is the primary use?</div>
+      <div class="ps-options">
+        <div class="ps-opt" data-step="3" data-val="agri">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><path d="M12 2Q12 10 7 16"/><path d="M12 2Q12 10 17 16"/><circle cx="12" cy="19" r="3"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Agriculture</div><div class="ps-opt-sub">Farming · Irrigation · Field supply</div></div>
+        </div>
+        <div class="ps-opt" data-step="3" data-val="home">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><path d="M3 12L12 3l9 9"/><rect x="5" y="12" width="14" height="9" rx="1"/><rect x="9" y="17" width="6" height="4"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Home</div><div class="ps-opt-sub">Domestic · Household water supply</div></div>
+        </div>
+        <div class="ps-opt" data-step="3" data-val="bldg">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="16" rx="1"/><path d="M2 22h20"/><rect x="8" y="10" width="3" height="3"/><rect x="13" y="10" width="3" height="3"/><rect x="8" y="16" width="3" height="3"/><rect x="13" y="16" width="3" height="3"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Building / Commercial</div><div class="ps-opt-sub">Apartment · Institution · Industry</div></div>
+        </div>
+        <div class="ps-opt" data-step="3" data-val="solar">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Solar / Off-Grid</div><div class="ps-opt-sub">No stable grid · MNRE subsidy · Agri</div></div>
+        </div>
+      </div>
+      <div class="ps-nav">
+        <button class="ps-btn-back" id="ps-back-3">← Back</button>
+        <button class="ps-btn-next" id="ps-next-3" disabled>Next →</button>
+      </div>
+    </div>
+
+    <!-- STEP 4: Power -->
+    <div class="ps-step" id="ps-step-4">
+      <div class="ps-step-label">Step 4 of 4</div>
+      <div class="ps-step-question">What is your power supply situation?</div>
+      <div class="ps-options">
+        <div class="ps-opt" data-step="4" data-val="grid">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Regular Grid Power</div><div class="ps-opt-sub">Reliable EB supply · Single or 3-phase</div></div>
+        </div>
+        <div class="ps-opt" data-step="4" data-val="erratic">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/><line x1="2" y1="2" x2="22" y2="22"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Erratic / Load Shedding</div><div class="ps-opt-sub">Frequent cuts · Voltage fluctuations</div></div>
+        </div>
+        <div class="ps-opt" data-step="4" data-val="solar">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">Solar / No Grid</div><div class="ps-opt-sub">Off-grid · Solar preferred · MNRE subsidy</div></div>
+        </div>
+        <div class="ps-opt" data-step="4" data-val="threephase">
+          <div class="ps-opt-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+          <div class="ps-opt-body"><div class="ps-opt-label">3-Phase Available</div><div class="ps-opt-sub">Industrial / agricultural 3-phase supply</div></div>
+        </div>
+      </div>
+      <div class="ps-nav">
+        <button class="ps-btn-back" id="ps-back-4">← Back</button>
+        <button class="ps-btn-next" id="ps-next-4" disabled>See My Recommendation →</button>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="ps-result" id="ps-result">
+      <div class="ps-result-badge">✓ Your Recommendation</div>
+      <div class="ps-result-type" id="ps-res-type"></div>
+      <div class="ps-result-model" id="ps-res-model"></div>
+      <div class="ps-result-note" id="ps-res-note"></div>
+      <div class="ps-result-card" id="ps-res-card"></div>
+      <div class="ps-result-actions">
+        <a href="#" class="btn-ps-wa ripple-btn" id="ps-wa-link" target="_blank">
+          <svg width="16" height="16" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Get a Quote on WhatsApp
+        </a>
+        <button class="btn-ps-reset ripple-btn" id="ps-reset">Start Over</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -587,6 +787,105 @@ const SOL_DATA={
     card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')card.click();});
   });
   closeBtn.addEventListener('click',()=>{if(active)active.classList.remove('active');panel.classList.remove('open');panel.setAttribute('aria-hidden','true');active=null;});
+})();
+
+/* PUMP SELECTOR */
+(function(){
+  var answers={};
+  var cur=1;
+
+  function getRecommendation(){
+    var s=answers[1],d=answers[2],u=answers[3],p=answers[4];
+    if(p==='solar'||u==='solar'){
+      if(s==='borewell')return{type:'Solar Borewell Submersible Pump',model:'Texmo / Aquatex Solar Submersible Series',note:'Off-grid ready with MPPT controller. MNRE subsidy applicable. Ideal for agri use without reliable grid power.',rows:[['Water Source','Borewell'],['Drive','Solar / MPPT Controller'],['Brand','Texmo · Aquatex'],['Subsidy','MNRE Subsidy Applicable']]};
+      return{type:'Surface Solar Pump',model:'Texmo Solar Surface / Monoblock',note:'Off-grid surface pump with solar MPPT drive. Ideal for open well, sump or canal irrigation.',rows:[['Water Source',s==='openwell'?'Open Well':'Surface / Canal'],['Drive','Solar / MPPT Controller'],['Brand','Texmo · Aquatex'],['Subsidy','MNRE Subsidy Applicable']]};
+    }
+    if(s==='borewell'){
+      if(d==='verydeep'||d==='deep'){
+        if(u==='agri')return{type:'Borewell Submersible Pumpset',model:'Texmo / Aquatex V4 · V6 Series',note:'High-head submersible pumpset built for deep agricultural borewells in Thanjavur district. 3-phase or single-phase variants available.',rows:[['Source','Deep Borewell'],['Depth','50 – 300+ ft'],['Use','Agriculture / Irrigation'],['Brand','Texmo · Aquatex']]};
+        if(u==='bldg')return{type:'Borewell Submersible + Hydropneumatic System',model:'Texmo / Aquatex Submersible + Booster',note:'Deep borewell submersible feeding a pressure booster system — ideal for apartments, schools, and commercial buildings.',rows:[['Source','Deep Borewell'],['Depth','50 – 300+ ft'],['Use','Commercial / Institutional'],['Brand','Texmo · Aquatex']]};
+        return{type:'Domestic Borewell Submersible',model:'Texmo / Aquatex 3\u2033 Submersible Series',note:'Compact submersible for deep domestic borewells. Compatible with auto pump controllers and level sensors.',rows:[['Source','Deep Borewell'],['Depth','50 – 250 ft'],['Use','Home / Domestic'],['Brand','Texmo · Aquatex']]};
+      }
+      if(u==='agri')return{type:'Openwell / Shallow Borewell Submersible',model:'Texmo / Aquatex Openwell Series',note:'Versatile submersible suitable for shallower borewells and open wells. High flow rate, agri-optimized.',rows:[['Source','Borewell (Shallow)'],['Depth','Up to 50 ft'],['Use','Agriculture'],['Brand','Texmo · Aquatex']]};
+      return{type:'Jet Pump or Self-Priming Pump',model:'Texmo Jet / Self-Priming Series',note:'Efficient for shallow borewells and open wells. Easy to install and maintain.',rows:[['Source','Shallow Borewell'],['Depth','Up to 50 ft'],['Use','Home / Domestic'],['Brand','Texmo']]};
+    }
+    if(s==='openwell'){
+      if(u==='agri')return{type:'Openwell Submersible Pumpset',model:'Texmo / Aquatex Openwell Series',note:'Wide-diameter impeller with high flow rate. Purpose-built for open well agricultural irrigation.',rows:[['Source','Open Well'],['Use','Agriculture / Irrigation'],['Flow','High Volume'],['Brand','Texmo · Aquatex']]};
+      if(u==='bldg')return{type:'Centrifugal / Monoblock Pump',model:'Texmo Monoblock / Multi-stage Series',note:'High-pressure pump for multi-floor water distribution from open well or sump.',rows:[['Source','Open Well / Sump'],['Use','Building / Commercial'],['Pressure','High Head'],['Brand','Texmo']]};
+      return{type:'Self-Priming Pump or Jet Pump',model:'Texmo Monoblock / Jet Series',note:'Simple, reliable household pump for open wells and sumps. Easy installation.',rows:[['Source','Open Well / Sump'],['Use','Home / Domestic'],['Type','Self-Priming / Jet'],['Brand','Texmo']]};
+    }
+    if(s==='muni'){
+      if(u==='bldg')return{type:'Hydropneumatic Pressure Booster System',model:'Texmo / Aquatex Booster System',note:'Constant pressure system for multi-floor buildings fed from municipality or sump tank. AMC support available.',rows:[['Source','Municipality / Tank'],['Use','Building / Commercial'],['Feature','Constant Pressure · Auto Control'],['Brand','Texmo · Aquatex']]};
+      return{type:'Pressure Booster Pump',model:'Texmo Pressure Booster Series',note:'Silent, compact booster pump for homes on municipality supply. Auto pressure control included.',rows:[['Source','Municipality / Overhead Tank'],['Use','Home'],['Feature','Auto Pressure Control'],['Brand','Texmo']]};
+    }
+    if(u==='agri')return{type:'Centrifugal / Monoblock Pump',model:'Texmo Agricultural Monoblock',note:'High-flow centrifugal pump for surface water irrigation. Ideal for canal and river intake.',rows:[['Source','Surface Water'],['Use','Agriculture / Irrigation'],['Type','Centrifugal / Monoblock'],['Brand','Texmo']]};
+    return{type:'Monoblock / Self-Priming Pump',model:'Texmo Monoblock Series',note:'Reliable, easy-to-operate pump for general water supply from any surface source.',rows:[['Source','Surface Water'],['Use','General / Domestic'],['Type','Self-Priming'],['Brand','Texmo']]};
+  }
+
+  function updateProgress(step){
+    for(var i=1;i<=4;i++){
+      var dot=document.getElementById('pd-'+i);
+      dot.classList.remove('current','done');
+      if(i<step)dot.classList.add('done');
+      else if(i===step)dot.classList.add('current');
+      if(i<4){var line=document.getElementById('pl-'+i);line.classList.remove('done');if(i<step)line.classList.add('done');}
+    }
+  }
+
+  function showStep(n){
+    document.querySelectorAll('.ps-step').forEach(function(s){s.classList.remove('active');});
+    document.getElementById('ps-result').classList.remove('active');
+    document.getElementById('ps-progress').style.display='flex';
+    var el=document.getElementById('ps-step-'+n);
+    if(el){el.classList.add('active');updateProgress(n);}
+    cur=n;
+  }
+
+  function showResult(){
+    document.querySelectorAll('.ps-step').forEach(function(s){s.classList.remove('active');});
+    document.getElementById('ps-progress').style.display='none';
+    var rec=getRecommendation();
+    document.getElementById('ps-res-type').textContent=rec.type;
+    document.getElementById('ps-res-model').textContent=rec.model;
+    document.getElementById('ps-res-note').textContent=rec.note;
+    var html=rec.rows.map(function(r){return'<div class="ps-result-card-row"><span class="ps-result-card-key">'+r[0]+'</span><span class="ps-result-card-val">'+r[1]+'</span></div>';}).join('');
+    document.getElementById('ps-res-card').innerHTML=html;
+    var msg='Hi, I used the Pump Selector on your website. My requirement: Source: '+rec.rows[0][1]+', Type: '+rec.type+'. Please advise.';
+    document.getElementById('ps-wa-link').href='https://wa.me/919865868623?text='+encodeURIComponent(msg);
+    document.getElementById('ps-result').classList.add('active');
+    document.getElementById('ps-result').scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+
+  document.querySelectorAll('.ps-opt').forEach(function(opt){
+    opt.addEventListener('click',function(){
+      var step=this.dataset.step;
+      document.querySelectorAll('.ps-opt[data-step="'+step+'"]').forEach(function(o){o.classList.remove('selected');});
+      this.classList.add('selected');
+      answers[parseInt(step)]=this.dataset.val;
+      var nextBtn=document.getElementById('ps-next-'+step);
+      if(nextBtn)nextBtn.disabled=false;
+    });
+  });
+
+  [1,2,3].forEach(function(i){
+    var btn=document.getElementById('ps-next-'+i);
+    if(btn)btn.addEventListener('click',function(){showStep(i+1);});
+  });
+  var last=document.getElementById('ps-next-4');
+  if(last)last.addEventListener('click',function(){showResult();});
+
+  [2,3,4].forEach(function(i){
+    var btn=document.getElementById('ps-back-'+i);
+    if(btn)btn.addEventListener('click',function(){showStep(i-1);});
+  });
+
+  document.getElementById('ps-reset').addEventListener('click',function(){
+    answers={};
+    document.querySelectorAll('.ps-opt').forEach(function(o){o.classList.remove('selected');});
+    document.querySelectorAll('.ps-btn-next').forEach(function(b){b.disabled=true;});
+    document.getElementById('ps-progress').style.display='flex';
+    showStep(1);
+  });
 })();
 
 /* RIPPLE */
