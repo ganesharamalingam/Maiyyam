@@ -280,8 +280,8 @@ nav.solid .nav-dealer img{filter:none;}
 .hero-btns{display:flex;gap:10px;flex-wrap:wrap;}
 .btn-hero-primary{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:12px 22px;border-radius:2px;font-size:14px;font-weight:600;transition:all .2s;}
 .btn-hero-primary:hover{background:var(--red-d);transform:translateY(-1px);}
-.btn-hero-wa{display:inline-flex;align-items:center;gap:8px;background:rgb(0 0 0 / 82%);border:1px solid rgba(255,255,255,.3);color:#f3f3f3;padding:12px 22px;border-radius:2px;font-size:14px;font-weight:500;transition:all .2s;}
-.btn-hero-wa:hover{background:rgb(0 0 0 / 50%);}
+.btn-hero-wa{display:inline-flex;align-items:center;gap:8px;background:#0e3445;border:1px solid #0e3445;color:#fff;padding:12px 22px;border-radius:2px;font-size:14px;font-weight:500;transition:all .2s;}
+.btn-hero-wa:hover{background:#0c2d3d;border-color:#0c2d3d;}
 
 /* Slide dots */
 .slide-dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:8px;}
@@ -675,7 +675,7 @@ body { font-family: 'Outfit', 'Open Sans', sans-serif; }
 
 /* ── SLIDER ── */
 .slider { width: 480px; height: 600px; border-radius: 0; box-shadow: 0 2px 28px rgba(0,0,0,.08); }
-#slideContainer > div img { width: 100%; height: 100%; object-fit: cover; }
+#slideContainer > div img { width: 100%; height: 100%; object-fit: contain; background: #f0ede5; }
 
 /* ── SECTION HEADINGS ── */
 .sec-title { font-family: 'Outfit', sans-serif; font-size: clamp(28px,3.2vw,44px); font-weight: 800; font-style: normal; letter-spacing: -0.5px; line-height: 1.1; }
@@ -684,12 +684,12 @@ body { font-family: 'Outfit', 'Open Sans', sans-serif; }
 .sec-sub { font-size: 16px; color: var(--ink3); margin-bottom: 32px; }
 
 /* ── STATS STRIP ── */
-.stats-strip { background: var(--ink); padding: 32px 8%; }
+.stats-strip { background: var(--cream); border-top: 1px solid var(--border); border-bottom: 3px solid var(--red); padding: 28px 8%; }
 .stats-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
 .stat-item { text-align: center; flex: 1; min-width: 110px; }
-.stat-num { font-size: clamp(14px,1.8vw,20px); font-weight: 800; color: #fff; line-height: 1.1; margin-bottom: 4px; font-family: 'Outfit', sans-serif; letter-spacing: -0.2px; }
-.stat-label { font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.4); }
-.stat-sep { width: 1px; height: 32px; background: rgba(255,255,255,.1); flex-shrink: 0; }
+.stat-num { font-size: clamp(13px,1.6vw,18px); font-weight: 800; color: #0e3445; line-height: 1.1; margin-bottom: 4px; font-family: 'Outfit', sans-serif; letter-spacing: -0.2px; }
+.stat-label { font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink3); }
+.stat-sep { width: 1px; height: 28px; background: var(--border); flex-shrink: 0; }
 @media (max-width:700px) { .stat-sep { display: none; } .stat-item { min-width: 90px; flex: 0 0 40%; } }
 
 /* ── SOLUTIONS TABS – clean underline ── */
@@ -741,11 +741,34 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
 /* ── NAV: single-line English name ── */
 .nav-name-en { white-space: nowrap; }
 
-/* ── STATS STRIP: water teal, not harsh black ── */
-.stats-strip { background: #0e3445; }
+/* ── PANEL HIGHLIGHT BANNER ── */
+.panel-highlight { background: #fff; border-left: 4px solid var(--red); padding: 14px 18px; border-radius: 2px; margin-bottom: 20px; display: flex; align-items: center; gap: 14px; box-shadow: inset 0 0 0 1px var(--border); }
+.panel-hi-icon { font-size: 28px; flex-shrink: 0; }
+.panel-hi-main { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 2px; letter-spacing: 0.1px; }
+.panel-hi-sub { font-size: 11px; color: var(--ink3); line-height: 1.4; }
+
+/* ── FLOATING PUMP SIDE WIDGET ── */
+.pump-side-widget { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 450; display: flex; align-items: stretch; }
+.pump-side-tab { background: #0e3445; color: white; padding: 22px 10px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 10px; border-radius: 8px 0 0 8px; box-shadow: -3px 0 16px rgba(0,0,0,.18); transition: background .2s; user-select: none; }
+.pump-side-tab:hover { background: #0c2d3d; }
+.pump-side-tab-icon { font-size: 18px; }
+.pump-side-tab-text { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; white-space: nowrap; }
+.pump-side-panel { background: #fff; width: 0; overflow: hidden; transition: width .35s cubic-bezier(.4,0,.2,1); box-shadow: -4px 0 24px rgba(0,0,0,.12); border-top: 3px solid #0e3445; border-left: 1px solid #e8e8e8; }
+.pump-side-widget.open .pump-side-panel { width: 270px; }
+.pump-side-panel-inner { width: 270px; padding: 22px 22px 20px; position: relative; }
+.pump-side-close { position: absolute; top: 10px; right: 12px; background: none; border: none; font-size: 20px; color: var(--ink3); cursor: pointer; line-height: 1; }
+.pump-side-close:hover { color: var(--ink); }
+.psp-eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #0e3445; margin-bottom: 8px; }
+.psp-title { font-size: 18px; font-weight: 800; color: var(--ink); line-height: 1.2; margin-bottom: 16px; font-family: 'Outfit', sans-serif; }
+.psp-steps { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+.psp-step { display: flex; align-items: flex-start; gap: 9px; font-size: 12px; color: var(--ink2); line-height: 1.4; }
+.psp-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); flex-shrink: 0; margin-top: 4px; }
+.psp-cta { display: flex; align-items: center; justify-content: center; background: var(--red); color: #fff; padding: 12px 16px; border-radius: 4px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background .2s; }
+.psp-cta:hover { background: var(--red-d); }
+@media (max-width: 600px) { .pump-side-widget { display: none; } }
 
 /* ── HERO HEADLINE (replaces Tamil logo image) ── */
-.hero-headline { font-size: clamp(32px,5vw,60px); font-weight: 800; line-height: 1; letter-spacing: -2px; color: var(--ink); margin-bottom: 10px; font-family: 'Outfit', sans-serif; }
+.hero-headline { font-size: clamp(32px,5vw,60px); font-weight: 800; line-height: 1; letter-spacing: -2px; color: #0e3445; margin-bottom: 10px; font-family: 'Outfit', sans-serif; }
 .hero-headline em { color: var(--red); font-style: normal; }
 
 /* ── HTML SLIDE: Why Uzhavar Maiyyam ── */
@@ -787,21 +810,6 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
 .f-tagline-ta { font-size: 15px; font-weight: 700; color: var(--red); margin-bottom: 3px; }
 .f-tagline-en { font-size: 12px; color: var(--ink3); font-style: italic; }
 
-/* ── PUMP POPUP ── */
-.pump-popup-overlay { display: none; position: fixed; inset: 0; background: rgba(10,15,20,.72); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
-.pump-popup-box { background: #fff; border-radius: 8px; padding: 40px 36px 28px; max-width: 420px; width: 100%; position: relative; box-shadow: 0 24px 64px rgba(0,0,0,.3); }
-.pump-popup-close { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 24px; color: var(--ink3); cursor: pointer; line-height: 1; padding: 4px; }
-.pump-popup-close:hover { color: var(--ink); }
-.pp-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
-.pp-title { font-size: clamp(20px,2.5vw,26px); font-weight: 800; color: var(--ink); line-height: 1.15; margin-bottom: 10px; font-family: 'Outfit', sans-serif; }
-.pp-desc { font-size: 13px; color: var(--ink3); line-height: 1.65; margin-bottom: 20px; }
-.pp-steps { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
-.pp-step { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: var(--ink2); line-height: 1.4; }
-.pp-step-num { width: 20px; height: 20px; border-radius: 50%; background: var(--red); color: #fff; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
-.pp-cta { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--red); color: #fff; padding: 13px 24px; border-radius: 4px; font-size: 14px; font-weight: 700; text-decoration: none; transition: background .2s; margin-bottom: 10px; }
-.pp-cta:hover { background: var(--red-d); }
-.pp-skip { width: 100%; background: none; border: none; font-size: 12px; color: var(--ink3); cursor: pointer; padding: 6px; transition: color .2s; }
-.pp-skip:hover { color: var(--ink); }
 </style>
 </head>
 <body>
@@ -975,6 +983,13 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
     <div class="sol-panels">
       <!-- AGRI -->
       <div class="sol-panel active" id="panel-agri">
+        <div class="panel-highlight">
+          <div class="panel-hi-icon">🌾</div>
+          <div>
+            <div class="panel-hi-main">Borewell · Openwell · Monoblock · Jet Pumps</div>
+            <div class="panel-hi-sub">Smart drip & sprinkler irrigation · IoT automation · Remote monitoring</div>
+          </div>
+        </div>
         <div class="sol-panel-grid">
           <div>
             <div class="sol-panel-title">Agriculture — <em>Complete Agri Water Systems</em></div>
@@ -1004,6 +1019,13 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
       </div>
       <!-- HOMES -->
       <div class="sol-panel" id="panel-homes">
+        <div class="panel-highlight">
+          <div class="panel-hi-icon">🏠</div>
+          <div>
+            <div class="panel-hi-main">Self-priming · Pressure Boosters · Jet Pumps</div>
+            <div class="panel-hi-sub">Level monitors · GSM controllers · Home automation</div>
+          </div>
+        </div>
         <div class="sol-panel-grid">
           <div>
             <div class="sol-panel-title">Homes — <em>Reliable Household Water Supply</em></div>
@@ -1033,6 +1055,13 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
       </div>
       <!-- BUILDINGS -->
       <div class="sol-panel" id="panel-bldg">
+        <div class="panel-highlight">
+          <div class="panel-hi-icon">🏗️</div>
+          <div>
+            <div class="panel-hi-main">Hydropneumatic · Sewage · Drainage & Dewatering</div>
+            <div class="panel-hi-sub">Multi-floor distribution · Automation · AMC support</div>
+          </div>
+        </div>
         <div class="sol-panel-grid">
           <div>
             <div class="sol-panel-title">Buildings & Institutions — <em>Complete Water Management</em></div>
@@ -1061,6 +1090,13 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
       </div>
       <!-- SOLAR -->
       <div class="sol-panel" id="panel-solar">
+        <div class="panel-highlight">
+          <div class="panel-hi-icon">☀️</div>
+          <div>
+            <div class="panel-hi-main">Solar Submersible & Surface Pump Systems</div>
+            <div class="panel-hi-sub">Off-grid agri systems · MPPT controllers · MNRE subsidy guidance</div>
+          </div>
+        </div>
         <div class="sol-panel-grid">
           <div>
             <div class="sol-panel-title">Solar — <em>Off-Grid & Sustainable Water Solutions</em></div>
@@ -1089,6 +1125,13 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
       </div>
       <!-- ACCESSORIES -->
       <div class="sol-panel acc-panel" id="panel-acc">
+        <div class="panel-highlight">
+          <div class="panel-hi-icon">⚙️</div>
+          <div>
+            <div class="panel-hi-main">UPVC Pipes · Cables · Starters · VFDs · Fittings</div>
+            <div class="panel-hi-sub">Aquatex · Finolex · BCH · Ashirvad & all major brands stocked</div>
+          </div>
+        </div>
         <div class="acc-panel-grid">
           <div>
             <div class="sol-panel-title">Allied Accessories — <em>Everything for a Complete System</em></div>
@@ -1178,7 +1221,7 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
         <img src="Images/founder.jpg" class="founder-img" alt="கோவிந்தராஜன் — Founder, உழவர் மையம்">
         <div class="founder-thought">
           <div class="founder-thought-ta">"என் பங்குக்கு நான் ஒரு வழிகாட்டி என்பதில் பெருமைபடுகிறேன்."</div>
-          <div class="founder-thought-cite">— கோவிந்தராஜன், உழவர் மையன்</div>
+          <div class="founder-thought-cite">— கோவிந்தராஜன்,<br>உழவர் மையன்</div>
         </div>
       </div>
       <div>
@@ -1255,23 +1298,24 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
   </div>
 </footer>
 
-<!-- PUMP SELECTOR POPUP -->
-<div id="pump-popup" class="pump-popup-overlay" onclick="if(event.target===this)closePumpPopup()">
-  <div class="pump-popup-box">
-    <button class="pump-popup-close" onclick="closePumpPopup()" aria-label="Close">×</button>
-    <div class="pp-eyebrow">Smart Pump Guidance</div>
-    <h3 class="pp-title">Not sure which pump<br>is right for you?</h3>
-    <p class="pp-desc">Answer 3 quick questions and get the right pump recommendation — based on 60+ years of field knowledge. Free, no sign-up needed.</p>
-    <div class="pp-steps">
-      <div class="pp-step"><div class="pp-step-num">1</div>Tell us your water source — borewell, openwell or surface</div>
-      <div class="pp-step"><div class="pp-step-num">2</div>Share depth, usage type and discharge requirement</div>
-      <div class="pp-step"><div class="pp-step-num">3</div>Get your exact pump recommendation instantly</div>
+<!-- FLOATING PUMP SIDE WIDGET -->
+<div id="pumpWidget" class="pump-side-widget">
+  <div class="pump-side-tab" id="pumpWidgetTab">
+    <div class="pump-side-tab-icon">💧</div>
+    <div class="pump-side-tab-text">Find My Pump</div>
+  </div>
+  <div class="pump-side-panel">
+    <div class="pump-side-panel-inner">
+      <button class="pump-side-close" id="pumpWidgetClose" aria-label="Close">×</button>
+      <div class="psp-eyebrow">Smart Pump Guidance</div>
+      <div class="psp-title">Find the right<br>pump for you</div>
+      <div class="psp-steps">
+        <div class="psp-step"><div class="psp-dot"></div>Tell us your water source — borewell, openwell or surface</div>
+        <div class="psp-step"><div class="psp-dot"></div>Share depth, usage & discharge requirement</div>
+        <div class="psp-step"><div class="psp-dot"></div>Get your exact recommendation instantly</div>
+      </div>
+      <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="psp-cta">Start Guidance →</a>
     </div>
-    <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="pp-cta" onclick="closePumpPopup()">
-      Find My Pump
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-    <button class="pp-skip" onclick="closePumpPopup()">Maybe later</button>
   </div>
 </div>
 
@@ -1327,16 +1371,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 4000);
 });
 
-/* PUMP POPUP */
-function closePumpPopup() {
-  document.getElementById('pump-popup').style.display = 'none';
-  sessionStorage.setItem('pumpPopupSeen', '1');
-}
-if (!sessionStorage.getItem('pumpPopupSeen')) {
-  setTimeout(function() {
-    document.getElementById('pump-popup').style.display = 'flex';
-  }, 5000);
-}
+/* FLOATING PUMP SIDE WIDGET */
+(function(){
+  var widget = document.getElementById('pumpWidget');
+  var tab    = document.getElementById('pumpWidgetTab');
+  var close  = document.getElementById('pumpWidgetClose');
+
+  // Auto-open after 6s if never dismissed this session
+  if (!sessionStorage.getItem('pumpWidgetDismissed')) {
+    setTimeout(function(){ widget.classList.add('open'); }, 6000);
+  }
+  tab.addEventListener('click', function(){ widget.classList.toggle('open'); });
+  close.addEventListener('click', function(e){
+    e.stopPropagation();
+    widget.classList.remove('open');
+    sessionStorage.setItem('pumpWidgetDismissed','1');
+  });
+})();
 </script>
 </body>
 </html>
