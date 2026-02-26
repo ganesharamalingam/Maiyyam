@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>உழவர் மையம் | Uzhavar Maiyyam — Thanjavur</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;900&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;900&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <style>
 /* Full row */
@@ -653,6 +653,91 @@ nav {
 }
 
 }
+
+/* ═══════════════════════════════════════════
+   NEW AGE · CLEAN MINIMAL REFRESH
+═══════════════════════════════════════════ */
+
+/* Global font */
+body { font-family: 'Outfit', 'Open Sans', sans-serif; }
+
+/* ── HERO ── */
+.full-row { background: #fff; padding: 0; }
+.row-container { margin-top: 0 !important; padding: 0 48px; }
+.hero-bg { padding: 130px 0 70px; }
+.hero-since { display: flex; align-items: center; gap: 8px; color: var(--red); font-size: 11px; font-weight: 600; letter-spacing: 3px; }
+.hero-ta img { max-height: 120px; max-width: 260px; }
+.hero-tagline-ta { font-size: 15px; font-weight: 400; color: var(--ink3); letter-spacing: 0; margin-bottom: 16px; }
+.hero-rule { background: var(--border); }
+.hero-en-name { font-size: 12px; letter-spacing: 5px; color: var(--ink3); margin-bottom: 8px; }
+.hero-desc { font-size: 14px; color: var(--ink2); line-height: 1.8; }
+.hero-digital { font-size: 12px; font-style: normal; font-weight: 500; color: var(--ink3); letter-spacing: 0.3px; margin-bottom: 28px; }
+
+/* ── SLIDER ── */
+.slider { width: 520px; height: 420px; border-radius: 0; box-shadow: 0 2px 28px rgba(0,0,0,.08); }
+.slides img { min-width: 520px; min-height: 420px; }
+
+/* ── SECTION HEADINGS ── */
+.sec-title { font-family: 'Outfit', sans-serif; font-size: clamp(28px,3.2vw,44px); font-weight: 800; font-style: normal; letter-spacing: -0.5px; line-height: 1.1; }
+.sec-title em { font-style: normal; }
+.eyebrow { color: var(--red); font-size: 10px; font-weight: 700; letter-spacing: 3px; }
+.sec-sub { font-size: 16px; color: var(--ink3); margin-bottom: 32px; }
+
+/* ── STATS STRIP ── */
+.stats-strip { background: var(--ink); padding: 32px 8%; }
+.stats-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.stat-item { text-align: center; flex: 1; min-width: 110px; }
+.stat-num { font-size: clamp(14px,1.8vw,20px); font-weight: 800; color: #fff; line-height: 1.1; margin-bottom: 4px; font-family: 'Outfit', sans-serif; letter-spacing: -0.2px; }
+.stat-label { font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.4); }
+.stat-sep { width: 1px; height: 32px; background: rgba(255,255,255,.1); flex-shrink: 0; }
+@media (max-width:700px) { .stat-sep { display: none; } .stat-item { min-width: 90px; flex: 0 0 40%; } }
+
+/* ── SOLUTIONS TABS – clean underline ── */
+.sol-tabs { background: #fff; border-bottom: 2px solid var(--border); justify-content: flex-start; text-transform: none; }
+.sol-tab { padding: 14px 20px; font-size: 13px; font-weight: 600; letter-spacing: 0; color: var(--ink3); border-left: none !important; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: color .2s, border-bottom-color .2s, background .2s; text-transform: none; }
+.sol-tab:not(:last-child) { border-bottom-color: transparent; }
+.sol-tab:hover { background: #fafafa; color: var(--ink); }
+.sol-tab.active { background: #fff; color: var(--red); border-bottom: 3px solid var(--red) !important; font-weight: 700; }
+.sol-panels { border: 1px solid var(--border); border-top: none; padding: 32px 24px; background: #faf9f7; }
+@media (max-width:850px) {
+  .sol-tab { text-align: center; }
+  .sol-tab.active { border-left-color: transparent !important; border-bottom: 3px solid var(--red) !important; background: #fff; }
+}
+
+/* ── SERVICE CENTRE ── */
+.service-centre { background: #fff; }
+.sc-box { border: none; background: var(--cream); }
+.sc-top { padding: 44px; }
+.sc-bottom { padding: 16px 44px; }
+.sc-title { font-family: 'Outfit', sans-serif; font-weight: 800; font-style: normal; }
+
+/* ── ABOUT ── */
+.about { background: #faf9f7; }
+.about-title { font-family: 'Outfit', sans-serif; font-weight: 800; }
+.about-title em { font-style: normal; }
+.about-body { font-size: 15px; color: var(--ink2); }
+
+/* ── CONTACT ── */
+.contact { background: #fff; }
+.contact-title { font-family: 'Outfit', sans-serif; font-weight: 800; }
+.contact-title em { font-style: normal; }
+
+/* ── CLOSING ── */
+.closing { background: var(--ink); border-top: none; padding: 32px 8%; }
+.closing p { font-size: 16px; font-style: normal; font-weight: 500; letter-spacing: 0.5px; color: rgba(255,255,255,.65); }
+
+/* ── FOOTER ── */
+footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%; }
+.f-kural { font-size: 13px; font-style: italic; color: var(--ink3); }
+.f-copy { font-size: 11px; color: rgba(0,0,0,.4); margin-top: 2px; }
+
+/* ── MOBILE HERO ── */
+@media (max-width: 768px) {
+  .slider { width: 100%; height: 280px; }
+  .slides img { min-width: 100%; min-height: 280px; }
+  .hero-bg { padding: 110px 0 40px; }
+  .row-container { padding: 0 20px; }
+}
 </style>
 </head>
 <body>
@@ -734,6 +819,37 @@ nav {
 
   </div>
 </div>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">1966</div>
+      <div class="stat-label">Founded in Thanjavur</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <div class="stat-num">60+ Years</div>
+      <div class="stat-label">Continuous Service</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <div class="stat-num">Texmo · Aquatex</div>
+      <div class="stat-label">Authorised Dealer</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <div class="stat-num">Agri · Home · Infra</div>
+      <div class="stat-label">Complete Water Solutions</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <div class="stat-num">Smart Guidance</div>
+      <div class="stat-label">Now Digitally Enabled</div>
+    </div>
+  </div>
+</div>
+
 <!-- SMART GUIDANCE STRIP -->
 <section id="guidance-strip" class="guidance-strip reveal">
   <div class="guidance-strip-inner">
