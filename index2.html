@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ta-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>உழவர் மையம் | Uzhavar Maiyyam — Thanjavur</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;900&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+/* Full row */
+.full-row {
+    width: 100%;
+    background: #d2eafa73;
+    padding: 60px 0;
+    
+}
+.sol-panel tr td:first-child {
+    width: 65%;
+}
+/* Inner container */
+.row-container {
+  
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+/* Left text section */
+.text-section {
+    flex: 1;
+}
+.text-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.sec-img img {
+    display: inline-block;
+    width: 49%;
+    margin-top: 10px;
+    border: 2px solid #5f839a;
+}
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.first-img {
+    max-width: 550px;
+    border: 2px solid #5f839a;
+}
+.sec-img img:first-child {
+    margin-right: 10px;
+}
+.first-img img {
+    max-height: 280px;
+}
+
+.sec-img {
+    max-width: 550px;
+}
+.img-sec img {
+    border-radius: 5px;
+    border: 3px solid #d4d0d0;
+}
+/* Slider wrapper */
+.slider {
+      width: 600px;
+      height: 500px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+.slides img {
+    min-width: 600px;
+    min-height: 500px;
+    object-fit: cover;
+}
+#slideContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  #slideContainer > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  #slideContainer > div.active {
+    opacity: 1;
+    z-index: 1;
+  }
+/* Buttons */
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.controls button {
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .row-container {
+        flex-direction: column;
+    }
+
+    .slider-section {
+        max-width: 100%;
+    }
+}
+
+
+img.footer-logo {
+    max-width: 244px;
+    margin-bottom: 10px;
+}
+ .hero-bg {
+    padding:125px 40px 40px 30px;
+}
+section#guidance-strip {
+    display: none;
+}
+:root{
+  --red:#B22222; --red-d:#8B1A1A;
+  --cream:#F5F1EA; --warm:#EDEAD4;
+  --ink:#1A1714; --ink2:#3D3630; --ink3:#7A6F66;
+  --border:#D5CCBC; --white:#ffffff;
+  --wa:#25D366;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"Open Sans", sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--red);}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.on{opacity:1;transform:none;}
+.inner{max-width:1280px;margin:0 auto;}
+.eyebrow{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink3);margin-bottom:10px;}
+.sec-title{font-size:clamp(26px,3vw,38px);color:var(--ink);line-height:1.15;margin-bottom:8px;font-style: italic;}
+.sec-title em{font-style:italic;color:var(--red);}
+.sec-sub {
+    font-size: 20px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+
+/* ── NAV ── */
+nav {
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid transparent;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav.solid {
+    background: rgb(255 255 255 / 97%);
+    backdrop-filter: blur(12px);
+    border-bottom-color: #d6d6d6ee;
+}
+
+nav.hero-nav{background:rgb(255 255 255 / 100%);border-bottom-color:rgba(255,255,255,.1);}
+.nav-brand{display:flex;align-items:center;gap:9px;}
+.nav-logo {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    flex-shrink: 0;
+    margin-top: 26px;
+    border-radius: 50%;
+}
+nav.solid .nav-logo{filter:none;mix-blend-mode:multiply;}
+.nav-name-ta{font-size:15px;font-weight:900;color:#fff;line-height:1;transition:color .3s;}
+nav.solid .nav-name-ta{color:var(--red);}
+
+.nav-name-en {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #d62034;
+    margin-top: 1px;
+    transition: color .3s;
+    margin-left: 1px;
+}
+
+.nav-links{display:flex;gap:22px;list-style:none;}
+.nav-links a{font-size:18px;font-weight:500;color:#000;transition:color .2s;}
+nav.solid .nav-links a{color:var(--ink2);}
+.nav-name-ta img.nav-logo {
+    width: 235px;
+    margin-top: 0px;
+    height: 48px;
+    border-radius: 0%;
+}
+.nav-links li {
+    padding: 0 15px;
+}
+.nav-links a:hover{color:#b22222;}
+nav.solid .nav-links a:hover{color:var(--red);}
+.nav-r{display:flex;align-items:center;gap:10px;}
+.nav-dealer{border:1px solid rgba(255,255,255,.25);border-radius:2px;padding:3px 8px;display:flex;align-items:center;}
+
+.nav-dealer img{height:53px;width:auto;object-fit:contain;margin-right: 10px; border: 1px solid #cfcdcd;}
+nav.solid .nav-dealer img{filter:none;}
+.nav-cta {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000;
+    border: 1.5px solid rgb(4 4 4 / 60%);
+    padding: 12px 17px;
+    border-radius: 2px;
+    letter-spacing: 0;
+    transition: all .2s;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+.header-sec {
+    background: #fff !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+}
+.nav-cta:hover{background:var(--red);border-color:var(--red);color:#fff;}
+
+
+/* Slide images as inline base64 set via JS */
+
+
+.hero-since{font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#000;margin-bottom:20px;align-items:center;gap:8px;}
+.hero-since::before{content:'';width:16px;height:1px;background:var(--red);}
+.hero-ta{font-size:clamp(60px,10vw,110px);font-weight:900;color:var(--red);line-height:.88;letter-spacing:-3px;margin-bottom:8px;text-shadow:0 2px 20px rgba(0,0,0,.3);}
+.hero-ta img {
+    max-height: 190px;
+    max-width: 350px;
+}
+.hero-tagline-ta{font-size:16px;font-weight:700;color:#000;margin-bottom:18px;line-height:1.5;}
+.hero-rule{height:1.5px;background:var(--red);margin-bottom:16px;}
+.hero-en-name{font-size:22px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#d62034;margin-bottom:6px;}
+.hero-desc{font-size:14px;color:#000;line-height:1.75;margin-bottom:6px;max-width:560px;}
+.hero-digital{font-size:13px;color:#000;font-style:italic;margin-bottom:28px;}
+.hero-creds-row{display:flex;align-items:center;gap:12px;margin-bottom:28px;flex-wrap:wrap;}
+.hero-creds-row img{height:38px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.8;}
+.hero-creds-sep{width:1px;height:30px;background:rgba(255,255,255,.2);}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;}
+.btn-hero-primary{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:12px 22px;border-radius:2px;font-size:14px;font-weight:600;transition:all .2s;}
+.btn-hero-primary:hover{background:var(--red-d);transform:translateY(-1px);}
+.btn-hero-wa{display:inline-flex;align-items:center;gap:8px;background:rgb(0 0 0 / 82%);border:1px solid rgba(255,255,255,.3);color:#f3f3f3;padding:12px 22px;border-radius:2px;font-size:14px;font-weight:500;transition:all .2s;}
+.btn-hero-wa:hover{background:rgb(0 0 0 / 50%);}
+
+/* Slide dots */
+.slide-dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:8px;}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.35);border:none;cursor:pointer;transition:background .3s,transform .3s;}
+.dot.active{background:#fff;transform:scale(1.2);}
+
+/* ── GUIDANCE STRIP (below hero, before solutions) ── */
+.guidance-strip{
+  background:var(--ink);padding:52px 8%;
+  border-bottom:3px solid var(--red);
+}
+.guidance-strip-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.gs-l .gs-eyebrow{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:10px;}
+.gs-title{font-size:clamp(22px,2.8vw,32px);color:#fff;line-height:1.2;margin-bottom:10px;}
+.gs-title em{font-style:italic;color:var(--red);}
+.gs-desc{font-size:14px;color:rgba(255,255,255,.6);line-height:1.75;margin-bottom:22px;}
+.btn-guidance{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:12px 22px;border-radius:2px;font-size:14px;font-weight:600;transition:all .2s;}
+.btn-guidance:hover{background:var(--red-d);transform:translateY(-1px);}
+.gs-r{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  border-radius:4px;padding:24px;
+}
+.gs-mock-title{font-size:11px;font-weight:600;letter-spacing:1px;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:16px;}
+.gs-mock-q{font-size:14px;color:rgba(255,255,255,.75);margin-bottom:14px;line-height:1.5;}
+.gs-mock-opts{display:flex;flex-wrap:wrap;gap:8px;}
+.gs-mock-opt{
+  font-size:12px;color:rgba(255,255,255,.65);
+  border:1px solid rgba(255,255,255,.2);
+  padding:6px 14px;border-radius:20px;
+  background:rgba(255,255,255,.05);
+  cursor:default;
+}
+.gs-mock-opt.selected{background:var(--red);border-color:var(--red);color:#fff;}
+
+/* ───────── SOLUTIONS SECTION ───────── */
+
+.solutions {
+  background: var(--white);
+  padding: 80px 8%;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* HEADER TOP */
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--ink3);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.sec-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+.sec-title em {
+  font-style: italic;
+  color: var(--red);
+}
+
+.sec-sub {
+    font-size: 20px;
+    color: #060606;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* ───────── TABS + CONTENT WRAPPER ───────── */
+
+.tabs-content-wrap {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0px;
+}
+.sol-closing {
+    margin-top: 28px;
+    padding: 18px 24px;
+    background: #d42931;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    font-size: 19px;
+    font-style: italic;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+}
+/* VERTICAL TABS */
+.sol-tabs {
+    display: flex;
+    flex-direction: row;
+    background: var(--cream);
+    text-transform: uppercase;
+    justify-content:space-between;
+}
+
+.sol-tab {
+    padding: 18px 30px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+    transition: color 0.3s, border-left-color 0.3s, background 0.3s;
+    user-select: none;
+}
+
+.sol-tab:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+.sol-tab:hover {
+  background: #f8f4f0;
+}
+
+.sol-tab.active {
+    color: #ffffff;
+    font-weight: 700;
+    border-left-color: var(--red);
+    background: #b22222;
+}
+
+/* PANELS */
+.sol-panels {
+    background: var(--white);
+    border: 1px solid #c6c6c6;
+    padding: 20px;
+}
+
+.sol-panel {
+  display: none;
+  padding: 20px 0;
+}
+
+.sol-panel.active {
+  display: block;
+}
+
+/* PANEL TITLE */
+.sol-panel-title {
+    font-size: 22px;
+    margin-bottom: 14px;
+    color: var(--ink);
+    font-style: italic;
+    font-weight: 700;
+}
+
+.sol-panel-title em {
+  color: var(--red);
+  font-style: italic;
+}
+
+/* COLUMN TITLES */
+.sol-col-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--ink3);
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+
+/* ITEM LISTS */
+.sol-item-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sol-item-list li {
+    font-size: 14px;
+    color: #000000;
+    padding: 3px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+    position: relative;
+}
+.sol-item-list li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: var(--red);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+
+.sol-item-list li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .tabs-content-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .sol-tabs {
+    flex-direction: row;
+    border-left: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sol-tab {
+    flex: 1;
+    text-align: center;
+    border-left: none !important;
+    border-bottom: none !important;
+    border-right: 1px solid var(--border);
+  }
+
+  .sol-tab:last-child {
+    border-right: none !important;
+  }
+
+  .sol-tab.active {
+    border-left-color: transparent !important;
+    border-bottom: 4px solid var(--red);
+    background: #fff;
+    
+  }
+}
+
+/* ACCESSORIES PANEL full width */
+.sol-panel.acc-panel{grid-template-columns:1fr 1fr 1fr;}
+.acc-brands{grid-column:1/-1;margin-top:8px;padding-top:20px;border-top:1px solid var(--border);}
+.acc-brands-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--ink3);margin-bottom:12px;}
+.acc-brands-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.acc-brand-tag{font-size:11px;font-weight:600;color:var(--ink2);border:1px solid var(--border);padding:5px 12px;border-radius:2px;background:var(--cream);}
+
+/* ── SERVICE CENTRE ── */
+.service-centre{background:var(--white);padding:80px 8%;border-top:1px solid var(--border);}
+.sc-box{border:1px solid var(--border);border-radius:2px;overflow:hidden;}
+.sc-top{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;padding:36px 36px 28px;}
+.sc-eyebrow{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:10px;}
+.sc-title{font-size:clamp(20px,2.5vw,28px);color:var(--ink);line-height:1.15;margin-bottom:10px;}
+.sc-desc{font-size:18px;color:#000000;line-height:1.75;margin-bottom:6px;}
+.sc-addr{font-size:13px;color:#000;letter-spacing:.3px;margin-bottom:20px;}
+.sc-btns{display:flex;gap:10px;flex-wrap:wrap;}
+
+.btn-sc-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #d62034;
+    color: #fff;
+    padding: 13px 26px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background .2s;
+}
+.btn-sc-call:hover{background:var(--red);}
+.btn-sc-cb{display:inline-flex;align-items:center;gap:7px;background:var(--white);color:var(--ink2);border:1px solid var(--border);padding:11px 20px;border-radius:2px;font-size:13px;font-weight:500;transition:border-color .2s;}
+.btn-sc-cb:hover{border-color:var(--ink2);}
+.sc-badge{display:flex;align-items:center;justify-content:center;padding:20px;}
+.sc-badge img{height:140px;width:auto;object-fit:contain;}
+.sc-bottom{background:var(--cream);border-top:1px solid var(--border);padding:16px 36px;display:flex;align-items:center;gap:8px;}
+.sc-bottom-dot{width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0;}
+.sc-bottom-text{font-size:15px;color:#000;}
+
+/* ── ABOUT ── */
+.about{background:var(--cream);padding:80px 8%;border-top:1px solid var(--border);}
+.about-grid{display:grid;grid-template-columns:220px 1fr;gap:52px;align-items:start;}
+.founder-img-wrap{position:relative;}
+.founder-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:2px;filter:sepia(15%) contrast(1.02);}
+.founder-thought{margin-top:14px;padding:12px 14px;border-left:2px solid var(--red);background:var(--white);border-radius:0 2px 2px 0;}
+.founder-thought-ta{font-size:12px;font-weight:700;color:var(--ink);line-height:1.6;margin-bottom:3px;}
+.founder-thought-cite{font-size:10px;color:var(--ink3);letter-spacing:.5px;text-transform:uppercase;}
+.about-eyebrow{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink3);margin-bottom:10px;}
+.about-title{font-size:clamp(22px,2.5vw,30px);color:var(--ink);line-height:1.2;margin-bottom:18px;}
+.about-title em{font-style:italic;color:var(--red);}
+.about-body{font-size:16px;color:var(--ink2);line-height:1.85;margin-bottom:13px;}
+.about-tagline-ta{font-size:14px;font-weight:700;color:var(--red);margin-top:20px;padding-top:18px;border-top:1px solid var(--border);}
+.about-tagline-closing{font-size:15px;font-style:italic;color:var(--ink3);margin-top:6px;}
+
+/* ── CONTACT ── */
+.contact{background:var(--white);border-top:1px solid var(--border);padding:80px 8%;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.contact-title{font-size:clamp(22px,2.5vw,30px);color:var(--ink);line-height:1.15;margin-bottom:24px;}
+.contact-title em{font-style:italic;color:var(--red);}
+.c-block{margin-bottom:14px;}
+.c-label{font-size:16px;font-weight:700;color:#000;margin-bottom:3px;letter-spacing:1.5px;text-transform:uppercase;}
+.c-val{font-size:14px;color:var(--ink2);line-height:1.6;}
+.c-val a{color:var(--ink2);}
+.c-val a:hover{color:var(--red);}
+.c-divider{height:1px;background:var(--border);margin:14px 0;}
+.c-btns{display:flex;flex-direction:column;gap:8px;margin-top:20px;}
+.btn-wa-full{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--wa);color:#fff;padding:13px;border-radius:2px;font-size:13px;font-weight:600;transition:opacity .2s;}
+.btn-wa-full:hover{opacity:.9;}
+.btn-call-line{display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border);color:var(--ink2);padding:13px;border-radius:2px;font-size:13px;font-weight:500;background:var(--cream);transition:border-color .2s;}
+.btn-call-line:hover{border-color:var(--ink2);}
+.map-wrap{border:1px solid var(--border);border-radius:2px;overflow:hidden;}
+.map-wrap iframe{display:block;width:100%;height:400px;border:0;}
+.map-footer{padding:12px 14px;border-top:1px solid var(--border);background:var(--cream);}
+.map-footer strong{display:block;font-size:11px;font-weight:700;color:var(--ink);margin-bottom:1px;}
+.map-footer span{font-size:11px;color:var(--ink3);}
+
+/* ── CLOSING ── */
+.closing{border-top:1px solid var(--border);padding:18px 8%;text-align:center;background:#d42931;}
+.closing p {
+    font-size: 18px;
+    font-style: italic;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 28px;
+}
+/* ── FOOTER ── */
+footer{background:#fff;padding:22px 8%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.f-ta{font-size:13px;font-weight:900;color:var(--red);}
+.f-mid{text-align:right;}
+.f-kural{font-size:14px;color:#000; margin-bottom:2px;}
+.f-copy{font-size:14px;color:#000;}
+.f-r{font-size:10px;color:rgba(255,255,255,.15);text-align:right;line-height:1.7;}
+
+/* ── FLOAT WA ── */
+.float-wa{position:fixed;bottom:20px;right:20px;z-index:400;width:48px;height:48px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 3px 14px rgba(37,211,102,.35);transition:transform .2s;}
+.float-wa:hover{transform:scale(1.07);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .guidance-strip-inner,.about-grid,.contact-grid{grid-template-columns:1fr;gap:32px;}
+  .sc-top{grid-template-columns:1fr;}
+  .sol-panel.active,.sol-panel.acc-panel{grid-template-columns:1fr;}
+  .sol-tabs{flex-wrap:wrap;}
+  .sol-tab{flex:1 1 33%;}
+}
+@media(max-width:600px){
+  .hero-ta{font-size:56px;}
+  .nav-links{display:none;}
+  .sol-tab{flex:1 1 50%;}
+  .sc-top{padding:24px;}
+}
+@media screen and (max-width: 1300px) and (min-width: 992px) {
+  nav {
+    padding: 0 20px;
+}
+.nav-links li {
+    padding: 0 11px;
+}
+.nav-name-ta img.nav-logo {
+    width: 205px;
+}
+.nav-name-en {
+    font-size: 12px;
+}
+.nav-logo {
+    width: 115px;
+    height: 115px;
+}
+nav {
+    height: 84px;
+}
+}
+@media screen and (max-width: 1120px) and (min-width: 1100px) {
+
+.nav-name-en {
+    font-size: 9px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/919865868623" class="float-wa" target="_blank" aria-label="WhatsApp">
+<svg width="22" height="22" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAV -->
+<div class="header-sec">
+<nav id="nav" class="hero-nav">
+ 
+  <a href="#top" class="nav-brand">
+    <img src="Images/logo.jpg" class="nav-logo" alt="உழவர் மையம்">
+    <div>
+      <div class="nav-name-ta"><img src="Images/logo-text.png" class="nav-logo" alt="உழவர் மையம்"></div>
+      <div class="nav-name-en">Uzhavar Maiyyam</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#solutions">Solutions</a></li>
+    <li><a href="#service-centre">Service</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="nav-dealer">
+      <img src="Images/auqa-dealer.png" alt="Aqua Group Authorised Dealer">
+      <img src="Images/Aqua-group.png" alt="Aqua Group Authorised Dealer">     
+    </div>
+    <a href="#guidance-strip" class="nav-cta">Smart Pump Guidance</a>
+  </div>
+
+</nav></div>
+
+<!-- HERO SLIDER -->
+<!---Hero Slider new-->
+<div class="full-row"  id="top">
+  <div class="row-container">
+
+      <!-- Left Text -->
+      <div class="text-section">
+        <div class="hero-content">
+          <div class="hero-bg">   
+          <div class="hero-since">Serving Thanjavur Continuously Since 1966</div>
+          <div class="hero-ta"><img src="Images/logo-text.png"  alt="உழவர் மையம்"></div>
+          <div class="hero-tagline-ta">நீரேற்றும் பணியில் அரை நூற்றாண்டுக்கு மேல்</div>
+          <div class="hero-rule"></div>
+          <div class="hero-en-name">Uzhavar Maiyyam</div>
+          <p class="hero-desc">Trusted Water Solutions Provider Since 1966 · Authorized Aqua Group (Texmo · Aquatex) Dealer & Company-Operated Service Centre.</p>
+          <p class="hero-digital">Now digitally enabled with smart pump guidance.</p>
+         
+          <div class="hero-btns">
+            <a href="#guidance-strip" class="btn-hero-primary">
+              Find the Right Pump in 2 Minutes
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://wa.me/919865868623?text=Hi%2C+I+would+like+a+quote." class="btn-hero-wa" target="_blank">
+              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Get Quote on WhatsApp
+            </a>
+          </div>
+       
+       
+        </div> 
+      </div>
+      </div>
+        <!-- Right Slider -->
+        <div class="slider-section">
+          <div class="slider">
+            <div class="slides" id="slideContainer">
+              <div class="active"><img src="Images/slider1.jpg" alt="Slide 1"></div>
+            <div><img src="Images/slider2.jpg" alt="Slide 2"></div>
+            <div><img src="Images/Slide3.jpg" alt="Slide 3"></div>
+            <div><img src="Images/Slider4.jpg" alt="Slide 4"></div>
+            </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+<!-- SMART GUIDANCE STRIP -->
+<section id="guidance-strip" class="guidance-strip reveal">
+  <div class="guidance-strip-inner">
+    <div class="gs-l">
+      <div class="gs-eyebrow">Smart Pump Guidance</div>
+      <h2 class="gs-title">Not sure which pump<br><em>is right for you?</em></h2>
+      <p class="gs-desc">Answer a few simple questions and get the right pump recommendation based on your requirement — your water source, depth and use. Backed by six decades of field knowledge from Thanjavur.</p>
+      <a href="https://advisor-rebuild-v2.preview.emergentagent.com/" target="_blank" class="btn-guidance">
+        Start Smart Guidance
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="gs-r">
+      <div class="gs-mock-title">Smart Pump Guidance</div>
+      <div class="gs-mock-q">நீரின் ஆதாரம் என்ன? / What is your water source?</div>
+      <div class="gs-mock-opts">
+        <div class="gs-mock-opt selected">Borewell</div>
+        <div class="gs-mock-opt">Openwell</div>
+        <div class="gs-mock-opt">Surface</div>
+      </div>
+      <div style="margin-top:16px;font-size:11px;color:rgba(255,255,255,.3);font-style:italic;">Answer a few questions → Get your recommendation</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section id="solutions" class="solutions">
+  <div class="inner">
+    <div class="reveal" style="margin-bottom:28px;">
+      <div class="eyebrow">What We Provide</div>
+      <h2 class="sec-title">Complete <em>Water Solutions</em></h2>
+      <p class="sec-sub">Select a category to explore what we supply, install and support.</p>
+    </div>
+   
+    <div class="sol-tabs reveal">
+      <div class="sol-tab active" onclick="showPanel('agri',this)">Agriculture</div>
+      <div class="sol-tab" onclick="showPanel('homes',this)">Homes</div>
+      <div class="sol-tab" onclick="showPanel('bldg',this)">Buildings & Institutions</div>
+      <div class="sol-tab" onclick="showPanel('solar',this)">Solar</div>
+      <div class="sol-tab" onclick="showPanel('acc',this)">Allied Accessories</div>
+    </div>
+    <div class="sol-panels">
+      <!-- AGRI -->
+      <div class="sol-panel active" id="panel-agri">
+        <table>
+          <tr>
+            <td><div style="grid-column:1/-1">
+              <div class="sol-panel-title">Agriculture — <em>Complete Agri Water Systems</em></div>
+            </div>
+            <div>
+              <div class="sol-col-title">Pumps & Equipment</div>
+              <ul class="sol-item-list">
+                <li>Openwell Submersible Pumpsets</li>
+                <li>Borewell Submersible Pumpsets</li>
+                <li>Agricultural Monoblock Pumps</li>
+                <li>Jet Pumps for shallow wells</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sol-col-title">Systems & Services</div>
+              <ul class="sol-item-list">
+                <li>Agri pump installation & commissioning</li>
+                <li>Smart drip & sprinkler irrigation systems</li>
+                <li>IoT-based irrigation controllers</li>
+                <li>Remote monitoring & automation</li>
+                <li>Allied accessories & fittings</li>
+              </ul>
+            </div></td>
+            <td class="img-sec"><img src="Images/Prod- Agri.jpg"></td>
+          </tr>
+        </table>
+        
+      </div>
+      <!-- HOMES -->
+      <div class="sol-panel" id="panel-homes">
+
+        <table>
+          <tr>
+            <td>
+              <div style="grid-column:1/-1">
+                <div class="sol-panel-title">Homes — <em>Reliable Household Water Supply</em></div>
+              </div>
+              <div>
+                <div class="sol-col-title">Pumps & Equipment</div>
+                <ul class="sol-item-list">
+                  <li>Domestic self-priming pumps</li>
+                  <li>Jet pumps for home use</li>
+                  <li>Pressure booster systems</li>
+                  <li>Multi-tank pump controllers</li>
+                </ul>
+              </div>
+              <div>
+                <div class="sol-col-title">Systems & Services</div>
+                <ul class="sol-item-list">
+                  <li>Pump installation & plumbing support</li>
+                  <li>Plumbing accessories & fittings</li>
+                  <li>Control panels & starters</li>
+                  <li>Home automation systems</li>
+                  <li>Level monitors & GSM controllers</li>
+                </ul>
+              </div>
+            </td>
+             <td class="img-sec"><img src="Images/Prod- Home.jpg"></td>
+        </tr>
+</table>
+        
+      </div>
+      <!-- BUILDINGS -->
+      <div class="sol-panel" id="panel-bldg">
+        <table>
+          <tr>
+            <td><div style="grid-column:1/-1">
+              <div class="sol-panel-title">Buildings & Institutions — <em>Complete Water Management</em></div>
+            </div>
+            <div>
+              <div class="sol-col-title">Pumps & Systems</div>
+              <ul class="sol-item-list">
+                <li>Hydropneumatic booster systems</li>
+                <li>Pressure pump sets</li>
+                <li>Sewage & waste water pumps</li>
+                <li>Drainage & dewatering pumps</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sol-col-title">Installation & Support</div>
+              <ul class="sol-item-list">
+                <li>Full system installation & commissioning</li>
+                <li>Automation systems for water distribution</li>
+                <li>Multi-floor water supply solutions</li>
+                <li>AMC & ongoing service support</li>
+              </ul>
+            </div></td>
+             <td class="img-sec"><img src="Images/Prod- Building.jpg"></td>
+        </tr>
+</table>
+        
+      </div>
+      <!-- SOLAR -->
+      <div class="sol-panel" id="panel-solar">
+        <table>
+          <tr>
+            <td><div style="grid-column:1/-1">
+              <div class="sol-panel-title">Solar — <em>Off-Grid & Sustainable Water Solutions</em></div>
+            </div>
+            <div>
+              <div class="sol-col-title">Equipment</div>
+              <ul class="sol-item-list">
+                <li>Solar submersible pumpsets</li>
+                <li>Surface solar pumps</li>
+                <li>MPPT controllers</li>
+                <li>Solar panels & mounting structure</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sol-col-title">Services</div>
+              <ul class="sol-item-list">
+                <li>Complete system installation</li>
+                <li>Off-grid agri solar systems</li>
+                <li>MNRE subsidy guidance</li>
+                <li>Commissioning & after-sales support</li>
+              </ul>
+            </div></td>
+             <td class="img-sec"><img src="Images/Prod- Solar.jpg"></td>
+        </tr>
+</table>
+        
+      </div>
+      <!-- ACCESSORIES -->
+      <div class="sol-panel acc-panel" id="panel-acc">
+        <table>
+          <tr>
+            <td><div style="grid-column:1/-1">
+              <div class="sol-panel-title">Allied Accessories — <em>Everything for a Complete System</em></div>
+            </div>
+            <div>
+              <div class="sol-col-title">Pipes & Cables</div>
+              <ul class="sol-item-list">
+                <li>UPVC column pipes & adaptors</li>
+                <li>HDPE pipes & fittings</li>
+                <li>Submersible cables</li>
+                <li>GI headers & plumbing lines</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sol-col-title">Electrical & Control</div>
+              <ul class="sol-item-list">
+                <li>Starters & control panels</li>
+                <li>VFDs (Variable Frequency Drives)</li>
+                <li>Motor protection devices</li>
+                <li>Rope & installation hardware</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sol-col-title">Other Fittings</div>
+              <ul class="sol-item-list">
+                <li>Plumbing fittings & valves</li>
+                <li>Foot valves & non-return valves</li>
+                <li>Pressure gauges & flow meters</li>
+                <li>All standard accessories</li>
+              </ul>
+            </div>
+            <div class="acc-brands">
+              <div class="acc-brands-label">Trusted Brands Stocked</div>
+              <div class="acc-brands-row">
+                <span class="acc-brand-tag">Aquatex</span>
+                <span class="acc-brand-tag">Finolex</span>
+                <span class="acc-brand-tag">Ashirvad</span>
+                <span class="acc-brand-tag">BCH</span>
+                <span class="acc-brand-tag">Texmo</span>
+                <span class="acc-brand-tag">& Other Trusted Brands</span>
+              </div>
+            </div>
+          </div></td>
+             <td class="img-sec"><img src="Images/somewhere.jpg"></td>
+        </tr>
+</table>
+</div>
+    </div>
+ 
+    <div class="sol-closing reveal">Everything required for a complete working water system — under one roof.</div>
+  </div>
+</section>
+
+<!-- SERVICE CENTRE -->
+<section id="service-centre" class="service-centre">
+  <div class="inner reveal">
+    <div style="margin-bottom:28px;">
+      <div class="eyebrow">Authorized Service</div>
+      <h2 class="sec-title">Aqua Group <em>Authorized Service Centre</em></h2>
+    </div>
+    <div class="sc-box">
+      <div class="sc-top">
+        <div>
+          <div class="sc-desc">Company-operated authorized service support with warranty-backed repairs, maintenance, and genuine spare parts for all Texmo and Aquatex products. Your warranty stays intact.</div>
+          <div class="sc-addr">Sidco Industrial Estate, Nanjikottai Road, Thanjavur</div>
+          <div class="sc-btns">
+            <a href="tel:+914362230883" class="btn-sc-call">Call Service Centre — 04362 – 230883</a>
+            <a href="https://wa.me/919865868623?text=Hi%2C+I+would+like+to+request+a+service+callback." class="btn-sc-cb" target="_blank">Request Service Callback</a>
+          </div>
+        </div>
+        <div class="sc-badge">
+          <img src="Images/Aqua-group.png"  alt="Aqua Group Authorised Service Partner">
+          </div>
+      </div>
+      <div class="sc-bottom">
+        <div class="sc-bottom-dot"></div>
+        <div class="sc-bottom-text">Genuine spare parts · Expert motor rewinding · Factory-certified repairs · Warranty-backed service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="inner">
+    <div class="about-grid reveal">
+      <div class="founder-img-wrap">
+        <img src="Images/founder.jpg" class="founder-img" alt="கோவிந்தராஜன் — Founder, உழவர் மையம்">
+        <div class="founder-thought">
+          <div class="founder-thought-ta">"என் பங்குக்கு நான் ஒரு வழிகாட்டி என்பதில் பெருமைபடுகிறேன்."</div>
+          <div class="founder-thought-cite">— கோவிந்தராஜன், உழவர் மையன்</div>
+        </div>
+      </div>
+      <div>
+        <div class="about-eyebrow">About Uzhavar Maiyyam</div>
+        <h2 class="about-title">Rooted in Service.<br><em>Evolved for Today.</em></h2>
+        <p class="about-body">Founded in 1966 in Thanjavur, Uzhavar Maiyyam has grown from a dedicated pump outlet into a complete water solutions provider serving agriculture, homes, and institutions across the region.</p>
+        <p class="about-body">Over six decades, the business has evolved from pump retail into end-to-end water management — encompassing supply, installation, irrigation, solar solutions, automation and authorized service. Through each phase, the mandate has remained constant: provide the right solution with honest guidance.</p>
+        <p class="about-body">Rooted in the agricultural service ethos of its founding, Uzhavar Maiyyam today combines ground-level field knowledge with modern digital systems — including smart pump guidance technology — to serve a new generation of customers without losing sight of where it began.</p>
+        <div class="about-tagline-ta">நீரேற்றும் பணியில் அரை நூற்றாண்டுக்கு மேல்</div>
+        <div class="about-tagline-closing">From a pump shop in 1966 to a complete water solutions system today.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="inner">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="eyebrow">Find Us</div>
+        <h2 class="contact-title">Come Visit or<br><em>Get in Touch</em></h2>
+        <div class="c-block">
+          <div class="c-label">Main Store</div>
+          <div class="c-val">2972/16, காந்திசாலை, தஞ்சாவூர் – 613 001</div>
+        </div>
+        <div class="c-divider"></div>
+        <div class="c-block">
+          <div class="c-label">Service Centre</div>
+          <div class="c-val">Sidco Industrial Estate, Nanjikottai Road, Thanjavur</div>
+        </div>
+        <div class="c-divider"></div>
+        <div class="c-block">
+          <div class="c-label">Phone</div>
+          <div class="c-val"><a href="tel:+919865868623">98658 68623</a> &nbsp;·&nbsp; <a href="tel:+914362230883">04362 – 230883</a></div>
+        </div>
+        <div class="c-divider"></div>
+        <div class="c-block">
+          <div class="c-label">Email</div>
+          <div class="c-val"><a href="mailto:uzhavarmaiyyam@gmail.com">uzhavarmaiyyam@gmail.com</a></div>
+        </div>
+        <div class="c-divider"></div>
+        <div class="c-block">
+          <div class="c-label">GSTIN</div>
+          <div class="c-val">33BOTPA0155C2ZG</div>
+        </div>
+      
+      </div>
+      <div class="reveal">
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4!2d79.1432!3d10.7869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab8ae2d0c0001%3A0x1f2e4c6b8a3d5e7f!2s2972%2C%20Gandhiji%20Salai%2C%20Thanjavur%2C%20Tamil%20Nadu%20613001!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="map-footer">
+            <strong>2972/16, காந்திசாலை, தஞ்சாவூர் – 613 001</strong>
+            <span>Main Store · Gandhiji Salai, Thanjavur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="closing"><p>From a pump shop in 1966 to a complete water solutions system today.</p></div>
+
+<footer>
+  <div class="bottom-logo">
+    <div class="f-ta"><img src="Images/logo-text.png" class="footer-logo"></div>
+  <div class="nav-name-en">Uzhavar Maiyyam</div>
+  </div>
+  
+  <div class="f-mid">
+    <div class="f-kural">நீரின்றி அமையாது உலகு</div>
+    <div class="f-copy">© 2025 Uzhavar Maiyyam · Authorised Aqua Group Dealer · Thanjavur</div>
+  </div>
+  
+</footer>
+
+<script>
+/* NAV */
+const nav=document.getElementById('nav');
+function updateNav(){
+  if(scrollY>80){nav.classList.remove('hero-nav');nav.classList.add('solid');}
+  else{nav.classList.add('hero-nav');nav.classList.remove('solid');}
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+
+/* REVEAL */
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');}),{threshold:.07});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+
+
+/* SOLUTION TABS */
+function showPanel(id,tab){
+  document.querySelectorAll('.sol-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.sol-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  tab.classList.add('active');
+}
+
+/* slider new  */
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.getElementById("slideContainer").children;
+    let index = 0;
+
+    setInterval(function () {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 5000);
+  });
+</script>
+</body>
+</html>
