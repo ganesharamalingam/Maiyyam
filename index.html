@@ -143,7 +143,7 @@ img.footer-logo {
     padding:125px 40px 40px 30px;
 }
 section#guidance-strip {
-    display: none;
+    display: none; /* kept hidden; pump selector exposed via popup */
 }
 :root{
   --red:#B22222; --red-d:#8B1A1A;
@@ -320,7 +320,7 @@ nav.solid .nav-dealer img{filter:none;}
 
 .solutions {
   background: var(--white);
-  padding: 80px 8%;
+  padding: 52px 8%;
 }
 
 .inner {
@@ -523,7 +523,7 @@ nav.solid .nav-dealer img{filter:none;}
 .acc-brand-tag{font-size:11px;font-weight:600;color:var(--ink2);border:1px solid var(--border);padding:5px 12px;border-radius:2px;background:var(--cream);}
 
 /* ── SERVICE CENTRE ── */
-.service-centre{background:var(--white);padding:80px 8%;border-top:1px solid var(--border);}
+.service-centre{background:var(--white);padding:52px 8%;border-top:1px solid var(--border);}
 .sc-box{border:1px solid var(--border);border-radius:2px;overflow:hidden;}
 .sc-top{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;padding:36px 36px 28px;}
 .sc-eyebrow{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:10px;}
@@ -554,7 +554,7 @@ nav.solid .nav-dealer img{filter:none;}
 .sc-bottom-text{font-size:15px;color:#000;}
 
 /* ── ABOUT ── */
-.about{background:var(--cream);padding:80px 8%;border-top:1px solid var(--border);}
+.about{background:var(--cream);padding:52px 8%;border-top:1px solid var(--border);}
 .about-grid{display:grid;grid-template-columns:220px 1fr;gap:52px;align-items:start;}
 .founder-img-wrap{position:relative;}
 .founder-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:2px;filter:sepia(15%) contrast(1.02);}
@@ -569,7 +569,7 @@ nav.solid .nav-dealer img{filter:none;}
 .about-tagline-closing{font-size:15px;font-style:italic;color:var(--ink3);margin-top:6px;}
 
 /* ── CONTACT ── */
-.contact{background:var(--white);border-top:1px solid var(--border);padding:80px 8%;}
+.contact{background:var(--white);border-top:1px solid var(--border);padding:52px 8%;}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
 .contact-title{font-size:clamp(22px,2.5vw,30px);color:var(--ink);line-height:1.15;margin-bottom:24px;}
 .contact-title em{font-style:italic;color:var(--red);}
@@ -770,17 +770,18 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
 .sp-cta:hover { background: var(--red-d); }
 .sp-drops { position: absolute; right: 24px; bottom: 20px; font-size: 26px; opacity: 0.15; letter-spacing: 4px; pointer-events: none; }
 
-/* ── SOL PANEL GRID LAYOUT ── */
-.sol-panel-grid { display: grid; grid-template-columns: 1fr 220px; gap: 28px; align-items: start; }
-.sol-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
-.sol-panel-img { width: 100%; aspect-ratio: 5/4; object-fit: cover; border-radius: 3px; box-shadow: 0 2px 14px rgba(0,0,0,.1); display: block; }
-.acc-panel-grid { display: grid; grid-template-columns: 1fr 220px; gap: 28px; align-items: start; }
-.acc-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px; }
+/* ── SOL PANEL GRID LAYOUT — full-width image on top ── */
+.sol-panel-grid { display: flex; flex-direction: column; }
+.sol-panel-grid > div:last-child { order: -1; }
+.sol-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.sol-panel-img { width: 100%; height: 260px; object-fit: cover; border-radius: 4px; margin-bottom: 22px; display: block; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+.acc-panel-grid { display: flex; flex-direction: column; }
+.acc-panel-grid > div:last-child { order: -1; }
+.acc-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 14px; }
 @media (max-width:900px) {
-  .sol-panel-grid, .acc-panel-grid { grid-template-columns: 1fr; }
-  .sol-panel-img { display: none; }
   .sol-cols { grid-template-columns: 1fr; }
   .acc-cols { grid-template-columns: 1fr 1fr; }
+  .sol-panel-img { height: 180px; }
 }
 
 /* ── FOOTER RESTRUCTURED ── */
@@ -790,6 +791,22 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
 .f-tagline { text-align: right; }
 .f-tagline-ta { font-size: 15px; font-weight: 700; color: var(--red); margin-bottom: 3px; }
 .f-tagline-en { font-size: 12px; color: var(--ink3); font-style: italic; }
+
+/* ── PUMP POPUP ── */
+.pump-popup-overlay { display: none; position: fixed; inset: 0; background: rgba(10,15,20,.72); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+.pump-popup-box { background: #fff; border-radius: 8px; padding: 40px 36px 28px; max-width: 420px; width: 100%; position: relative; box-shadow: 0 24px 64px rgba(0,0,0,.3); }
+.pump-popup-close { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 24px; color: var(--ink3); cursor: pointer; line-height: 1; padding: 4px; }
+.pump-popup-close:hover { color: var(--ink); }
+.pp-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.pp-title { font-size: clamp(20px,2.5vw,26px); font-weight: 800; color: var(--ink); line-height: 1.15; margin-bottom: 10px; font-family: 'Outfit', sans-serif; }
+.pp-desc { font-size: 13px; color: var(--ink3); line-height: 1.65; margin-bottom: 20px; }
+.pp-steps { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
+.pp-step { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: var(--ink2); line-height: 1.4; }
+.pp-step-num { width: 20px; height: 20px; border-radius: 50%; background: var(--red); color: #fff; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.pp-cta { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--red); color: #fff; padding: 13px 24px; border-radius: 4px; font-size: 14px; font-weight: 700; text-decoration: none; transition: background .2s; margin-bottom: 10px; }
+.pp-cta:hover { background: var(--red-d); }
+.pp-skip { width: 100%; background: none; border: none; font-size: 12px; color: var(--ink3); cursor: pointer; padding: 6px; transition: color .2s; }
+.pp-skip:hover { color: var(--ink); }
 </style>
 </head>
 <body>
@@ -861,10 +878,15 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
         <div class="slider-section">
           <div class="slider">
             <div class="slides" id="slideContainer">
-              <div class="active"><img src="Images/Slider1.jpg" alt="Slide 1"></div>
-            <div><img src="Images/Slider2.jpg" alt="Slide 2"></div>
-            <div><img src="Images/Slide3.jpg" alt="Slide 3"></div>
-            <div><img src="Images/Slider4.jpg" alt="Slide 4"></div>
+              <div class="active"><img src="Images/brand-1.jpg" alt="Water for farmers"></div>
+              <div><img src="Images/brand-2.jpg" alt="Irrigation at work"></div>
+              <div><img src="Images/Slider1.jpg" alt="Uzhavar Maiyyam store"></div>
+              <div><img src="Images/brand-3.jpg" alt="Pump solutions in the field"></div>
+              <div><img src="Images/brand-4.jpg" alt="Agricultural water management"></div>
+              <div><img src="Images/Slider2.jpg" alt="Our product range"></div>
+              <div><img src="Images/brand-5.jpg" alt="Sustainable farming"></div>
+              <div><img src="Images/brand-6.jpg" alt="Complete water solutions"></div>
+              <div><img src="Images/Slider4.jpg" alt="Authorised dealer showroom"></div>
 
             <!-- WHY UZHAVAR MAIYYAM slide -->
             <div class="slide-why">
@@ -897,6 +919,7 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
 
             </div>
           </div>
+          <div class="slide-dots" id="slideDots"></div>
       </div>
 
   </div>
@@ -1261,6 +1284,26 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
   </div>
 </footer>
 
+<!-- PUMP SELECTOR POPUP -->
+<div id="pump-popup" class="pump-popup-overlay" onclick="if(event.target===this)closePumpPopup()">
+  <div class="pump-popup-box">
+    <button class="pump-popup-close" onclick="closePumpPopup()" aria-label="Close">×</button>
+    <div class="pp-eyebrow">Smart Pump Guidance</div>
+    <h3 class="pp-title">Not sure which pump<br>is right for you?</h3>
+    <p class="pp-desc">Answer 3 quick questions and get the right pump recommendation — based on 60+ years of field knowledge. Free, no sign-up needed.</p>
+    <div class="pp-steps">
+      <div class="pp-step"><div class="pp-step-num">1</div>Tell us your water source — borewell, openwell or surface</div>
+      <div class="pp-step"><div class="pp-step-num">2</div>Share depth, usage type and discharge requirement</div>
+      <div class="pp-step"><div class="pp-step-num">3</div>Get your exact pump recommendation instantly</div>
+    </div>
+    <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="pp-cta" onclick="closePumpPopup()">
+      Find My Pump
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <button class="pp-skip" onclick="closePumpPopup()">Maybe later</button>
+  </div>
+</div>
+
 <script>
 /* NAV */
 const nav=document.getElementById('nav');
@@ -1285,17 +1328,44 @@ function showPanel(id,tab){
   tab.classList.add('active');
 }
 
-/* slider new  */
+/* SLIDER with dots */
 document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.getElementById("slideContainer").children;
-    let index = 0;
+  const container = document.getElementById("slideContainer");
+  const slides = container.children;
+  const dotsEl = document.getElementById("slideDots");
+  let index = 0;
 
-    setInterval(function () {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
-    }, 5000);
+  Array.from(slides).forEach(function(_, i) {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i+1));
+    d.addEventListener('click', function() { goTo(i); });
+    dotsEl.appendChild(d);
   });
+
+  function goTo(n) {
+    slides[index].classList.remove("active");
+    dotsEl.children[index].classList.remove("active");
+    index = n;
+    slides[index].classList.add("active");
+    dotsEl.children[index].classList.add("active");
+  }
+
+  setInterval(function() {
+    goTo((index + 1) % slides.length);
+  }, 4000);
+});
+
+/* PUMP POPUP */
+function closePumpPopup() {
+  document.getElementById('pump-popup').style.display = 'none';
+  sessionStorage.setItem('pumpPopupSeen', '1');
+}
+if (!sessionStorage.getItem('pumpPopupSeen')) {
+  setTimeout(function() {
+    document.getElementById('pump-popup').style.display = 'flex';
+  }, 5000);
+}
 </script>
 </body>
 </html>
