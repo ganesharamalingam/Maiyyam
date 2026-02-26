@@ -738,6 +738,58 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
   .hero-bg { padding: 110px 0 40px; }
   .row-container { padding: 0 20px; }
 }
+
+/* ── NAV: single-line English name ── */
+.nav-name-en { white-space: nowrap; }
+
+/* ── STATS STRIP: water teal, not harsh black ── */
+.stats-strip { background: #0e3445; }
+
+/* ── HERO HEADLINE (replaces Tamil logo image) ── */
+.hero-headline { font-size: clamp(32px,5vw,60px); font-weight: 800; line-height: 1; letter-spacing: -2px; color: var(--ink); margin-bottom: 10px; font-family: 'Outfit', sans-serif; }
+.hero-headline em { color: var(--red); font-style: normal; }
+
+/* ── HTML SLIDE: Why Uzhavar Maiyyam ── */
+.slide-why { background: #f5f0e4; padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; }
+.sw-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--red); border: 1.5px solid var(--red); padding: 4px 10px; border-radius: 2px; margin-bottom: 16px; width: fit-content; }
+.sw-title { font-size: clamp(20px,2.8vw,28px); font-weight: 800; color: var(--ink); line-height: 1.1; margin-bottom: 18px; font-family: 'Outfit', sans-serif; }
+.sw-title span { color: var(--red); }
+.sw-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.sw-list li { font-size: 13px; color: var(--ink2); display: flex; align-items: flex-start; gap: 9px; line-height: 1.45; }
+.sw-list li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--red); flex-shrink: 0; margin-top: 6px; }
+.sw-footer { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--ink3); border-top: 1px solid var(--border); padding-top: 14px; }
+
+/* ── HTML SLIDE: Pump Selector CTA ── */
+.slide-pump { background: linear-gradient(140deg, #0a3040 0%, #1a5568 60%, #0f4055 100%); padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; position: relative; overflow: hidden; }
+.sp-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #7de8ff; margin-bottom: 10px; }
+.sp-title { font-size: clamp(20px,2.8vw,26px); font-weight: 800; color: #fff; line-height: 1.1; margin-bottom: 14px; font-family: 'Outfit', sans-serif; }
+.sp-hints { display: flex; flex-direction: column; gap: 7px; margin-bottom: 22px; }
+.sp-hint { display: flex; align-items: center; gap: 9px; font-size: 12px; color: rgba(255,255,255,.75); }
+.sp-hint-icon { width: 22px; height: 22px; border-radius: 50%; background: rgba(125,232,255,.12); display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; }
+.sp-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: #fff; padding: 11px 20px; border-radius: 2px; font-size: 13px; font-weight: 700; width: fit-content; text-decoration: none; transition: background .2s; }
+.sp-cta:hover { background: var(--red-d); }
+.sp-drops { position: absolute; right: 24px; bottom: 20px; font-size: 26px; opacity: 0.15; letter-spacing: 4px; pointer-events: none; }
+
+/* ── SOL PANEL GRID LAYOUT ── */
+.sol-panel-grid { display: grid; grid-template-columns: 1fr 220px; gap: 28px; align-items: start; }
+.sol-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.sol-panel-img { width: 100%; aspect-ratio: 5/4; object-fit: cover; border-radius: 3px; box-shadow: 0 2px 14px rgba(0,0,0,.1); display: block; }
+.acc-panel-grid { display: grid; grid-template-columns: 1fr 220px; gap: 28px; align-items: start; }
+.acc-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px; }
+@media (max-width:900px) {
+  .sol-panel-grid, .acc-panel-grid { grid-template-columns: 1fr; }
+  .sol-panel-img { display: none; }
+  .sol-cols { grid-template-columns: 1fr; }
+  .acc-cols { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── FOOTER RESTRUCTURED ── */
+footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
+.footer-top { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 16px; }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; flex-wrap: wrap; gap: 8px; }
+.f-tagline { text-align: right; }
+.f-tagline-ta { font-size: 15px; font-weight: 700; color: var(--red); margin-bottom: 3px; }
+.f-tagline-en { font-size: 12px; color: var(--ink3); font-style: italic; }
 </style>
 </head>
 <body>
@@ -768,7 +820,7 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
       <img src="Images/auqa-dealer.png" alt="Aqua Group Authorised Dealer">
       <img src="Images/Aqua-group.png" alt="Aqua Group Authorised Dealer">     
     </div>
-    <a href="#guidance-strip" class="nav-cta">Smart Pump Guidance</a>
+    <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="nav-cta">Smart Pump Guidance</a>
   </div>
 
 </nav></div>
@@ -783,15 +835,15 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
         <div class="hero-content">
           <div class="hero-bg">   
           <div class="hero-since">Serving Thanjavur Continuously Since 1966</div>
-          <div class="hero-ta"><img src="Images/logo-text.png"  alt="உழவர் மையம்"></div>
+          <div class="hero-headline">Trusted Water<br><em>Solutions</em></div>
           <div class="hero-tagline-ta">நீரேற்றும் பணியில் அரை நூற்றாண்டுக்கு மேல்</div>
           <div class="hero-rule"></div>
-          <div class="hero-en-name">Uzhavar Maiyyam</div>
-          <p class="hero-desc">Trusted Water Solutions Provider Since 1966 · Authorized Aqua Group (Texmo · Aquatex) Dealer & Company-Operated Service Centre.</p>
-          <p class="hero-digital">Now digitally enabled with smart pump guidance.</p>
-         
+          <div class="hero-en-name">Gandhiji Salai, Thanjavur — Est. 1966</div>
+          <p class="hero-desc">Authorized Aqua Group (Texmo · Aquatex) Dealer & Company-Operated Service Centre. Complete water solutions for agriculture, homes, buildings and solar.</p>
+          <p class="hero-digital">Now digitally enabled — find your right pump in minutes.</p>
+
           <div class="hero-btns">
-            <a href="#guidance-strip" class="btn-hero-primary">
+            <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="btn-hero-primary">
               Find the Right Pump in 2 Minutes
               <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -813,6 +865,36 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
             <div><img src="Images/Slider2.jpg" alt="Slide 2"></div>
             <div><img src="Images/Slide3.jpg" alt="Slide 3"></div>
             <div><img src="Images/Slider4.jpg" alt="Slide 4"></div>
+
+            <!-- WHY UZHAVAR MAIYYAM slide -->
+            <div class="slide-why">
+              <div class="sw-badge">Est. 1966 · Thanjavur</div>
+              <h3 class="sw-title">Why <span>Uzhavar Maiyyam?</span></h3>
+              <ul class="sw-list">
+                <li>60+ years serving Thanjavur farmers, homes & institutions</li>
+                <li>Authorized Texmo & Aquatex dealer — genuine products only</li>
+                <li>Company-operated service centre — warranty stays intact</li>
+                <li>End-to-end: supply, installation, irrigation, solar & AMC</li>
+              </ul>
+              <div class="sw-footer">Gandhiji Salai · Thanjavur 613 001</div>
+            </div>
+
+            <!-- FIND YOUR PUMP slide -->
+            <div class="slide-pump">
+              <div class="sp-eyebrow">Smart Pump Guidance</div>
+              <h3 class="sp-title">Not sure which pump<br>fits your need?</h3>
+              <div class="sp-hints">
+                <div class="sp-hint"><div class="sp-hint-icon">💧</div> Tell us your water source — borewell, openwell or surface</div>
+                <div class="sp-hint"><div class="sp-hint-icon">📏</div> Share depth, usage and discharge requirement</div>
+                <div class="sp-hint"><div class="sp-hint-icon">✅</div> Get your exact pump recommendation instantly</div>
+              </div>
+              <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="sp-cta">
+                Find My Pump
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <div class="sp-drops">💧💧💧</div>
+            </div>
+
             </div>
           </div>
       </div>
@@ -857,7 +939,7 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
       <div class="gs-eyebrow">Smart Pump Guidance</div>
       <h2 class="gs-title">Not sure which pump<br><em>is right for you?</em></h2>
       <p class="gs-desc">Answer a few simple questions and get the right pump recommendation based on your requirement — your water source, depth and use. Backed by six decades of field knowledge from Thanjavur.</p>
-      <a href="https://advisor-rebuild-v2.preview.emergentagent.com/" target="_blank" class="btn-guidance">
+      <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="btn-guidance">
         Start Smart Guidance
         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -894,44 +976,40 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
     <div class="sol-panels">
       <!-- AGRI -->
       <div class="sol-panel active" id="panel-agri">
-        <table>
-          <tr>
-            <td><div style="grid-column:1/-1">
-              <div class="sol-panel-title">Agriculture — <em>Complete Agri Water Systems</em></div>
+        <div class="sol-panel-grid">
+          <div>
+            <div class="sol-panel-title">Agriculture — <em>Complete Agri Water Systems</em></div>
+            <div class="sol-cols">
+              <div>
+                <div class="sol-col-title">Pumps & Equipment</div>
+                <ul class="sol-item-list">
+                  <li>Openwell Submersible Pumpsets</li>
+                  <li>Borewell Submersible Pumpsets</li>
+                  <li>Agricultural Monoblock Pumps</li>
+                  <li>Jet Pumps for shallow wells</li>
+                </ul>
+              </div>
+              <div>
+                <div class="sol-col-title">Systems & Services</div>
+                <ul class="sol-item-list">
+                  <li>Agri pump installation & commissioning</li>
+                  <li>Smart drip & sprinkler irrigation systems</li>
+                  <li>IoT-based irrigation controllers</li>
+                  <li>Remote monitoring & automation</li>
+                  <li>Allied accessories & fittings</li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <div class="sol-col-title">Pumps & Equipment</div>
-              <ul class="sol-item-list">
-                <li>Openwell Submersible Pumpsets</li>
-                <li>Borewell Submersible Pumpsets</li>
-                <li>Agricultural Monoblock Pumps</li>
-                <li>Jet Pumps for shallow wells</li>
-              </ul>
-            </div>
-            <div>
-              <div class="sol-col-title">Systems & Services</div>
-              <ul class="sol-item-list">
-                <li>Agri pump installation & commissioning</li>
-                <li>Smart drip & sprinkler irrigation systems</li>
-                <li>IoT-based irrigation controllers</li>
-                <li>Remote monitoring & automation</li>
-                <li>Allied accessories & fittings</li>
-              </ul>
-            </div></td>
-            <td class="img-sec"><img src="Images/Prod- Agri.jpg"></td>
-          </tr>
-        </table>
-        
+          </div>
+          <div><img src="Images/Prod- Agri.jpg" class="sol-panel-img" alt="Agriculture Solutions"></div>
+        </div>
       </div>
       <!-- HOMES -->
       <div class="sol-panel" id="panel-homes">
-
-        <table>
-          <tr>
-            <td>
-              <div style="grid-column:1/-1">
-                <div class="sol-panel-title">Homes — <em>Reliable Household Water Supply</em></div>
-              </div>
+        <div class="sol-panel-grid">
+          <div>
+            <div class="sol-panel-title">Homes — <em>Reliable Household Water Supply</em></div>
+            <div class="sol-cols">
               <div>
                 <div class="sol-col-title">Pumps & Equipment</div>
                 <ul class="sol-item-list">
@@ -951,105 +1029,102 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
                   <li>Level monitors & GSM controllers</li>
                 </ul>
               </div>
-            </td>
-             <td class="img-sec"><img src="Images/Prod- Home.jpg"></td>
-        </tr>
-</table>
-        
+            </div>
+          </div>
+          <div><img src="Images/Prod- Home.jpg" class="sol-panel-img" alt="Home Solutions"></div>
+        </div>
       </div>
       <!-- BUILDINGS -->
       <div class="sol-panel" id="panel-bldg">
-        <table>
-          <tr>
-            <td><div style="grid-column:1/-1">
-              <div class="sol-panel-title">Buildings & Institutions — <em>Complete Water Management</em></div>
+        <div class="sol-panel-grid">
+          <div>
+            <div class="sol-panel-title">Buildings & Institutions — <em>Complete Water Management</em></div>
+            <div class="sol-cols">
+              <div>
+                <div class="sol-col-title">Pumps & Systems</div>
+                <ul class="sol-item-list">
+                  <li>Hydropneumatic booster systems</li>
+                  <li>Pressure pump sets</li>
+                  <li>Sewage & waste water pumps</li>
+                  <li>Drainage & dewatering pumps</li>
+                </ul>
+              </div>
+              <div>
+                <div class="sol-col-title">Installation & Support</div>
+                <ul class="sol-item-list">
+                  <li>Full system installation & commissioning</li>
+                  <li>Automation systems for water distribution</li>
+                  <li>Multi-floor water supply solutions</li>
+                  <li>AMC & ongoing service support</li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <div class="sol-col-title">Pumps & Systems</div>
-              <ul class="sol-item-list">
-                <li>Hydropneumatic booster systems</li>
-                <li>Pressure pump sets</li>
-                <li>Sewage & waste water pumps</li>
-                <li>Drainage & dewatering pumps</li>
-              </ul>
-            </div>
-            <div>
-              <div class="sol-col-title">Installation & Support</div>
-              <ul class="sol-item-list">
-                <li>Full system installation & commissioning</li>
-                <li>Automation systems for water distribution</li>
-                <li>Multi-floor water supply solutions</li>
-                <li>AMC & ongoing service support</li>
-              </ul>
-            </div></td>
-             <td class="img-sec"><img src="Images/Prod- Building.jpg"></td>
-        </tr>
-</table>
-        
+          </div>
+          <div><img src="Images/Prod- Building.jpg" class="sol-panel-img" alt="Building Solutions"></div>
+        </div>
       </div>
       <!-- SOLAR -->
       <div class="sol-panel" id="panel-solar">
-        <table>
-          <tr>
-            <td><div style="grid-column:1/-1">
-              <div class="sol-panel-title">Solar — <em>Off-Grid & Sustainable Water Solutions</em></div>
+        <div class="sol-panel-grid">
+          <div>
+            <div class="sol-panel-title">Solar — <em>Off-Grid & Sustainable Water Solutions</em></div>
+            <div class="sol-cols">
+              <div>
+                <div class="sol-col-title">Equipment</div>
+                <ul class="sol-item-list">
+                  <li>Solar submersible pumpsets</li>
+                  <li>Surface solar pumps</li>
+                  <li>MPPT controllers</li>
+                  <li>Solar panels & mounting structure</li>
+                </ul>
+              </div>
+              <div>
+                <div class="sol-col-title">Services</div>
+                <ul class="sol-item-list">
+                  <li>Complete system installation</li>
+                  <li>Off-grid agri solar systems</li>
+                  <li>MNRE subsidy guidance</li>
+                  <li>Commissioning & after-sales support</li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <div class="sol-col-title">Equipment</div>
-              <ul class="sol-item-list">
-                <li>Solar submersible pumpsets</li>
-                <li>Surface solar pumps</li>
-                <li>MPPT controllers</li>
-                <li>Solar panels & mounting structure</li>
-              </ul>
-            </div>
-            <div>
-              <div class="sol-col-title">Services</div>
-              <ul class="sol-item-list">
-                <li>Complete system installation</li>
-                <li>Off-grid agri solar systems</li>
-                <li>MNRE subsidy guidance</li>
-                <li>Commissioning & after-sales support</li>
-              </ul>
-            </div></td>
-             <td class="img-sec"><img src="Images/Prod- Solar.jpg"></td>
-        </tr>
-</table>
-        
+          </div>
+          <div><img src="Images/Prod- Solar.jpg" class="sol-panel-img" alt="Solar Solutions"></div>
+        </div>
       </div>
       <!-- ACCESSORIES -->
       <div class="sol-panel acc-panel" id="panel-acc">
-        <table>
-          <tr>
-            <td><div style="grid-column:1/-1">
-              <div class="sol-panel-title">Allied Accessories — <em>Everything for a Complete System</em></div>
-            </div>
-            <div>
-              <div class="sol-col-title">Pipes & Cables</div>
-              <ul class="sol-item-list">
-                <li>UPVC column pipes & adaptors</li>
-                <li>HDPE pipes & fittings</li>
-                <li>Submersible cables</li>
-                <li>GI headers & plumbing lines</li>
-              </ul>
-            </div>
-            <div>
-              <div class="sol-col-title">Electrical & Control</div>
-              <ul class="sol-item-list">
-                <li>Starters & control panels</li>
-                <li>VFDs (Variable Frequency Drives)</li>
-                <li>Motor protection devices</li>
-                <li>Rope & installation hardware</li>
-              </ul>
-            </div>
-            <div>
-              <div class="sol-col-title">Other Fittings</div>
-              <ul class="sol-item-list">
-                <li>Plumbing fittings & valves</li>
-                <li>Foot valves & non-return valves</li>
-                <li>Pressure gauges & flow meters</li>
-                <li>All standard accessories</li>
-              </ul>
+        <div class="acc-panel-grid">
+          <div>
+            <div class="sol-panel-title">Allied Accessories — <em>Everything for a Complete System</em></div>
+            <div class="acc-cols">
+              <div>
+                <div class="sol-col-title">Pipes & Cables</div>
+                <ul class="sol-item-list">
+                  <li>UPVC column pipes & adaptors</li>
+                  <li>HDPE pipes & fittings</li>
+                  <li>Submersible cables</li>
+                  <li>GI headers & plumbing lines</li>
+                </ul>
+              </div>
+              <div>
+                <div class="sol-col-title">Electrical & Control</div>
+                <ul class="sol-item-list">
+                  <li>Starters & control panels</li>
+                  <li>VFDs (Variable Frequency Drives)</li>
+                  <li>Motor protection devices</li>
+                  <li>Rope & installation hardware</li>
+                </ul>
+              </div>
+              <div>
+                <div class="sol-col-title">Other Fittings</div>
+                <ul class="sol-item-list">
+                  <li>Plumbing fittings & valves</li>
+                  <li>Foot valves & non-return valves</li>
+                  <li>Pressure gauges & flow meters</li>
+                  <li>All standard accessories</li>
+                </ul>
+              </div>
             </div>
             <div class="acc-brands">
               <div class="acc-brands-label">Trusted Brands Stocked</div>
@@ -1062,11 +1137,10 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
                 <span class="acc-brand-tag">& Other Trusted Brands</span>
               </div>
             </div>
-          </div></td>
-             <td class="img-sec"><img src="Images/somewhere.jpg"></td>
-        </tr>
-</table>
-</div>
+          </div>
+          <div><img src="Images/Hero 3 Accessories.jpg" class="sol-panel-img" alt="Accessories & Fittings"></div>
+        </div>
+      </div>
     </div>
  
     <div class="sol-closing reveal">Everything required for a complete working water system — under one roof.</div>
@@ -1119,8 +1193,6 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
         <p class="about-body">Founded in 1966 in Thanjavur, Uzhavar Maiyyam has grown from a dedicated pump outlet into a complete water solutions provider serving agriculture, homes, and institutions across the region.</p>
         <p class="about-body">Over six decades, the business has evolved from pump retail into end-to-end water management — encompassing supply, installation, irrigation, solar solutions, automation and authorized service. Through each phase, the mandate has remained constant: provide the right solution with honest guidance.</p>
         <p class="about-body">Rooted in the agricultural service ethos of its founding, Uzhavar Maiyyam today combines ground-level field knowledge with modern digital systems — including smart pump guidance technology — to serve a new generation of customers without losing sight of where it began.</p>
-        <div class="about-tagline-ta">நீரேற்றும் பணியில் அரை நூற்றாண்டுக்கு மேல்</div>
-        <div class="about-tagline-closing">From a pump shop in 1966 to a complete water solutions system today.</div>
       </div>
     </div>
   </div>
@@ -1172,19 +1244,21 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
   </div>
 </section>
 
-<div class="closing"><p>From a pump shop in 1966 to a complete water solutions system today.</p></div>
-
 <footer>
-  <div class="bottom-logo">
-    <div class="f-ta"><img src="Images/logo-text.png" class="footer-logo"></div>
-  <div class="nav-name-en">Uzhavar Maiyyam</div>
+  <div class="footer-top">
+    <div class="bottom-logo">
+      <div class="f-ta"><img src="Images/logo-text.png" class="footer-logo"></div>
+      <div class="nav-name-en">Uzhavar Maiyyam</div>
+    </div>
+    <div class="f-tagline">
+      <div class="f-tagline-ta">நீரேற்றும் பணியில் அரை நூற்றாண்டுக்கு மேல்</div>
+      <div class="f-tagline-en">From a pump shop in 1966 to a complete water solutions system today.</div>
+    </div>
   </div>
-  
-  <div class="f-mid">
+  <div class="footer-bottom">
     <div class="f-kural">நீரின்றி அமையாது உலகு</div>
     <div class="f-copy">© 2025 Uzhavar Maiyyam · Authorised Aqua Group Dealer · Thanjavur</div>
   </div>
-  
 </footer>
 
 <script>
