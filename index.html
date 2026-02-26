@@ -147,6 +147,7 @@ section#guidance-strip {
 }
 :root{
   --red:#B22222; --red-d:#8B1A1A;
+  --aqua:#009b94; --aqua-d:#007a74;
   --cream:#F5F1EA; --warm:#EDEAD4;
   --ink:#1A1714; --ink2:#3D3630; --ink3:#7A6F66;
   --border:#D5CCBC; --white:#ffffff;
@@ -162,7 +163,7 @@ img{display:block;max-width:100%;}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease;}
 .reveal.on{opacity:1;transform:none;}
 .inner{max-width:1280px;margin:0 auto;}
-.eyebrow{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink3);margin-bottom:10px;}
+.eyebrow{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--aqua);margin-bottom:10px;}
 .sec-title{font-size:clamp(26px,3vw,38px);color:var(--ink);line-height:1.15;margin-bottom:8px;font-style: italic;}
 .sec-title em{font-style:italic;color:var(--red);}
 .sec-sub {
@@ -239,8 +240,8 @@ nav.solid .nav-dealer img{filter:none;}
 .nav-cta {
     font-size: 15px;
     font-weight: 600;
-    color: #000000;
-    border: 1.5px solid rgb(4 4 4 / 60%);
+    color: var(--aqua);
+    border: 1.5px solid var(--aqua);
     padding: 12px 17px;
     border-radius: 2px;
     letter-spacing: 0;
@@ -256,7 +257,7 @@ nav.solid .nav-dealer img{filter:none;}
     right: 0;
     z-index: 300;
 }
-.nav-cta:hover{background:var(--red);border-color:var(--red);color:#fff;}
+.nav-cta:hover{background:var(--aqua);border-color:var(--aqua);color:#fff;}
 
 
 /* Slide images as inline base64 set via JS */
@@ -280,8 +281,8 @@ nav.solid .nav-dealer img{filter:none;}
 .hero-btns{display:flex;gap:10px;flex-wrap:wrap;}
 .btn-hero-primary{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:12px 22px;border-radius:2px;font-size:14px;font-weight:600;transition:all .2s;}
 .btn-hero-primary:hover{background:var(--red-d);transform:translateY(-1px);}
-.btn-hero-wa{display:inline-flex;align-items:center;gap:8px;background:#0e3445;border:1px solid #0e3445;color:#fff;padding:12px 22px;border-radius:2px;font-size:14px;font-weight:500;transition:all .2s;}
-.btn-hero-wa:hover{background:#0c2d3d;border-color:#0c2d3d;}
+.btn-hero-wa{display:inline-flex;align-items:center;gap:8px;background:var(--aqua);border:1px solid var(--aqua);color:#fff;padding:12px 22px;border-radius:2px;font-size:14px;font-weight:500;transition:all .2s;}
+.btn-hero-wa:hover{background:var(--aqua-d);border-color:var(--aqua-d);}
 
 /* Slide dots */
 .slide-dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:8px;}
@@ -561,7 +562,7 @@ nav.solid .nav-dealer img{filter:none;}
 .founder-thought{margin-top:14px;padding:12px 14px;border-left:2px solid var(--red);background:var(--white);border-radius:0 2px 2px 0;}
 .founder-thought-ta{font-size:12px;font-weight:700;color:var(--ink);line-height:1.6;margin-bottom:3px;}
 .founder-thought-cite{font-size:10px;color:var(--ink3);letter-spacing:.5px;text-transform:uppercase;}
-.about-eyebrow{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink3);margin-bottom:10px;}
+.about-eyebrow{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--aqua);margin-bottom:10px;}
 .about-title{font-size:clamp(22px,2.5vw,30px);color:var(--ink);line-height:1.2;margin-bottom:18px;}
 .about-title em{font-style:italic;color:var(--red);}
 .about-body{font-size:16px;color:var(--ink2);line-height:1.85;margin-bottom:13px;}
@@ -680,14 +681,14 @@ body { font-family: 'Outfit', 'Open Sans', sans-serif; }
 /* ── SECTION HEADINGS ── */
 .sec-title { font-family: 'Outfit', sans-serif; font-size: clamp(28px,3.2vw,44px); font-weight: 800; font-style: normal; letter-spacing: -0.5px; line-height: 1.1; }
 .sec-title em { font-style: normal; }
-.eyebrow { color: var(--red); font-size: 10px; font-weight: 700; letter-spacing: 3px; }
+.eyebrow { color: var(--aqua); font-size: 10px; font-weight: 700; letter-spacing: 3px; }
 .sec-sub { font-size: 16px; color: var(--ink3); margin-bottom: 32px; }
 
 /* ── STATS STRIP ── */
 .stats-strip { background: var(--cream); border-top: 1px solid var(--border); border-bottom: 3px solid var(--red); padding: 28px 8%; }
 .stats-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
 .stat-item { text-align: center; flex: 1; min-width: 110px; }
-.stat-num { font-size: clamp(13px,1.6vw,18px); font-weight: 800; color: #0e3445; line-height: 1.1; margin-bottom: 4px; font-family: 'Outfit', sans-serif; letter-spacing: -0.2px; }
+.stat-num { font-size: clamp(13px,1.6vw,18px); font-weight: 800; color: var(--aqua); line-height: 1.1; margin-bottom: 4px; font-family: 'Outfit', sans-serif; letter-spacing: -0.2px; }
 .stat-label { font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink3); }
 .stat-sep { width: 1px; height: 28px; background: var(--border); flex-shrink: 0; }
 @media (max-width:700px) { .stat-sep { display: none; } .stat-item { min-width: 90px; flex: 0 0 40%; } }
@@ -747,28 +748,26 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
 .panel-hi-main { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 2px; letter-spacing: 0.1px; }
 .panel-hi-sub { font-size: 11px; color: var(--ink3); line-height: 1.4; }
 
-/* ── FLOATING PUMP SIDE WIDGET ── */
-.pump-side-widget { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 450; display: flex; align-items: stretch; }
-.pump-side-tab { background: #0e3445; color: white; padding: 22px 10px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 10px; border-radius: 8px 0 0 8px; box-shadow: -3px 0 16px rgba(0,0,0,.18); transition: background .2s; user-select: none; }
-.pump-side-tab:hover { background: #0c2d3d; }
-.pump-side-tab-icon { font-size: 18px; }
-.pump-side-tab-text { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; white-space: nowrap; }
-.pump-side-panel { background: #fff; width: 0; overflow: hidden; transition: width .35s cubic-bezier(.4,0,.2,1); box-shadow: -4px 0 24px rgba(0,0,0,.12); border-top: 3px solid #0e3445; border-left: 1px solid #e8e8e8; }
-.pump-side-widget.open .pump-side-panel { width: 270px; }
-.pump-side-panel-inner { width: 270px; padding: 22px 22px 20px; position: relative; }
-.pump-side-close { position: absolute; top: 10px; right: 12px; background: none; border: none; font-size: 20px; color: var(--ink3); cursor: pointer; line-height: 1; }
-.pump-side-close:hover { color: var(--ink); }
-.psp-eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #0e3445; margin-bottom: 8px; }
-.psp-title { font-size: 18px; font-weight: 800; color: var(--ink); line-height: 1.2; margin-bottom: 16px; font-family: 'Outfit', sans-serif; }
-.psp-steps { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
-.psp-step { display: flex; align-items: flex-start; gap: 9px; font-size: 12px; color: var(--ink2); line-height: 1.4; }
-.psp-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); flex-shrink: 0; margin-top: 4px; }
-.psp-cta { display: flex; align-items: center; justify-content: center; background: var(--red); color: #fff; padding: 12px 16px; border-radius: 4px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background .2s; }
-.psp-cta:hover { background: var(--red-d); }
-@media (max-width: 600px) { .pump-side-widget { display: none; } }
+/* ── PUMP BOTTOM BANNER ── */
+.pump-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 490; background: linear-gradient(120deg, var(--aqua) 0%, var(--aqua-d) 55%, #083240 100%); transform: translateY(100%); transition: transform .5s cubic-bezier(.4,0,.2,1); border-top: 1px solid rgba(255,255,255,.12); }
+.pump-banner.visible { transform: translateY(0); }
+.pump-banner-inner { max-width: 1280px; margin: 0 auto; padding: 15px 8%; display: flex; align-items: center; gap: 24px; position: relative; overflow: hidden; }
+.pump-banner-mark { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); opacity: 0.08; color: #fff; pointer-events: none; line-height: 0; }
+.pump-banner-icon { flex-shrink: 0; color: rgba(255,255,255,.85); line-height: 0; }
+.pump-banner-text { flex: 1; min-width: 0; }
+.pump-banner-label { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,.6); display: block; margin-bottom: 2px; font-weight: 600; }
+.pump-banner-strong { font-size: 14px; font-weight: 700; color: #fff; font-family: 'Outfit', sans-serif; letter-spacing: -0.1px; }
+.pump-banner-cta { flex-shrink: 0; background: #fff; color: var(--aqua); padding: 11px 22px; border-radius: 3px; font-size: 13px; font-weight: 700; text-decoration: none; transition: all .2s; white-space: nowrap; }
+.pump-banner-cta:hover { background: var(--cream); }
+.pump-banner-close { flex-shrink: 0; background: none; border: none; color: rgba(255,255,255,.55); font-size: 22px; cursor: pointer; padding: 2px 8px; transition: color .2s; line-height: 1; }
+.pump-banner-close:hover { color: #fff; }
+@media (max-width: 600px) { .pump-banner-inner { padding: 13px 5%; gap: 12px; } .pump-banner-label { display: none; } .pump-banner-strong { font-size: 12px; } }
 
-/* ── HERO HEADLINE (replaces Tamil logo image) ── */
-.hero-headline { font-size: clamp(32px,5vw,60px); font-weight: 800; line-height: 1; letter-spacing: -2px; color: #0e3445; margin-bottom: 10px; font-family: 'Outfit', sans-serif; }
+/* ── PANEL SVG ICON ── */
+.panel-hi-svg { width: 26px; height: 26px; flex-shrink: 0; display: block; }
+
+/* ── HERO HEADLINE ── */
+.hero-headline { font-size: clamp(32px,5vw,60px); font-weight: 800; line-height: 1; letter-spacing: -2px; color: var(--aqua); margin-bottom: 10px; font-family: 'Outfit', sans-serif; }
 .hero-headline em { color: var(--red); font-style: normal; }
 
 /* ── HTML SLIDE: Why Uzhavar Maiyyam ── */
@@ -840,7 +839,7 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
       <img src="Images/auqa-dealer.png" alt="Aqua Group Authorised Dealer">
       <img src="Images/Aqua-group.png" alt="Aqua Group Authorised Dealer">     
     </div>
-    <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="nav-cta">Smart Pump Guidance</a>
+    <a href="https://smart-pump-selector.preview.emergentagent.com/" target="_blank" class="nav-cta">Smart Pump Guidance</a>
   </div>
 
 </nav></div>
@@ -863,7 +862,7 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
           <p class="hero-digital">Now digitally enabled — find your right pump in minutes.</p>
 
           <div class="hero-btns">
-            <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="btn-hero-primary">
+            <a href="https://smart-pump-selector.preview.emergentagent.com/" target="_blank" class="btn-hero-primary">
               Find the Right Pump in 2 Minutes
               <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -910,7 +909,11 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
 </div>
 
 <!-- STATS STRIP -->
-<div class="stats-strip">
+<div class="stats-strip" style="position:relative;overflow:hidden;">
+  <!-- Brand impeller watermark -->
+  <div style="position:absolute;right:3%;top:50%;transform:translateY(-50%);opacity:0.07;color:var(--aqua);pointer-events:none;line-height:0;">
+    <svg width="90" height="90" viewBox="0 0 100 100" fill="currentColor"><g transform="translate(50,50)"><path d="M0,0 C-3,-10 -4,-22 4,-26 C12,-30 22,-18 18,-6 Z" transform="rotate(0)"/><path d="M0,0 C-3,-10 -4,-22 4,-26 C12,-30 22,-18 18,-6 Z" transform="rotate(72)"/><path d="M0,0 C-3,-10 -4,-22 4,-26 C12,-30 22,-18 18,-6 Z" transform="rotate(144)"/><path d="M0,0 C-3,-10 -4,-22 4,-26 C12,-30 22,-18 18,-6 Z" transform="rotate(216)"/><path d="M0,0 C-3,-10 -4,-22 4,-26 C12,-30 22,-18 18,-6 Z" transform="rotate(288)"/><circle r="6"/></g></svg>
+  </div>
   <div class="stats-inner">
     <div class="stat-item">
       <div class="stat-num">1966</div>
@@ -946,7 +949,7 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
       <div class="gs-eyebrow">Smart Pump Guidance</div>
       <h2 class="gs-title">Not sure which pump<br><em>is right for you?</em></h2>
       <p class="gs-desc">Answer a few simple questions and get the right pump recommendation based on your requirement — your water source, depth and use. Backed by six decades of field knowledge from Thanjavur.</p>
-      <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="btn-guidance">
+      <a href="https://smart-pump-selector.preview.emergentagent.com/" target="_blank" class="btn-guidance">
         Start Smart Guidance
         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -984,7 +987,7 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
       <!-- AGRI -->
       <div class="sol-panel active" id="panel-agri">
         <div class="panel-highlight">
-          <div class="panel-hi-icon">🌾</div>
+          <svg class="panel-hi-svg" viewBox="0 0 24 24" fill="none" stroke="var(--aqua)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V11"/><path d="M12 11C12 8 9 4 5 5c1 3 4 5 7 6z"/><path d="M12 11C12 8 15 4 19 5c-1 3-4 5-7 6z"/><path d="M7 18c1.5.8 3.5.8 5 0"/></svg>
           <div>
             <div class="panel-hi-main">Borewell · Openwell · Monoblock · Jet Pumps</div>
             <div class="panel-hi-sub">Smart drip & sprinkler irrigation · IoT automation · Remote monitoring</div>
@@ -1020,7 +1023,7 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
       <!-- HOMES -->
       <div class="sol-panel" id="panel-homes">
         <div class="panel-highlight">
-          <div class="panel-hi-icon">🏠</div>
+          <svg class="panel-hi-svg" viewBox="0 0 24 24" fill="none" stroke="var(--aqua)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1v-9.5z"/><path d="M9 21V13h6v8"/></svg>
           <div>
             <div class="panel-hi-main">Self-priming · Pressure Boosters · Jet Pumps</div>
             <div class="panel-hi-sub">Level monitors · GSM controllers · Home automation</div>
@@ -1056,7 +1059,7 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
       <!-- BUILDINGS -->
       <div class="sol-panel" id="panel-bldg">
         <div class="panel-highlight">
-          <div class="panel-hi-icon">🏗️</div>
+          <svg class="panel-hi-svg" viewBox="0 0 24 24" fill="none" stroke="var(--aqua)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="17" rx="1"/><rect x="14" y="9" width="7" height="12" rx="1"/><path d="M6 8h1M6 12h1M6 16h1M17 13h1M17 17h1"/></svg>
           <div>
             <div class="panel-hi-main">Hydropneumatic · Sewage · Drainage & Dewatering</div>
             <div class="panel-hi-sub">Multi-floor distribution · Automation · AMC support</div>
@@ -1091,7 +1094,7 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
       <!-- SOLAR -->
       <div class="sol-panel" id="panel-solar">
         <div class="panel-highlight">
-          <div class="panel-hi-icon">☀️</div>
+          <svg class="panel-hi-svg" viewBox="0 0 24 24" fill="none" stroke="var(--aqua)" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <div>
             <div class="panel-hi-main">Solar Submersible & Surface Pump Systems</div>
             <div class="panel-hi-sub">Off-grid agri systems · MPPT controllers · MNRE subsidy guidance</div>
@@ -1126,7 +1129,7 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
       <!-- ACCESSORIES -->
       <div class="sol-panel acc-panel" id="panel-acc">
         <div class="panel-highlight">
-          <div class="panel-hi-icon">⚙️</div>
+          <svg class="panel-hi-svg" viewBox="0 0 24 24" fill="none" stroke="var(--aqua)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
           <div>
             <div class="panel-hi-main">UPVC Pipes · Cables · Starters · VFDs · Fittings</div>
             <div class="panel-hi-sub">Aquatex · Finolex · BCH · Ashirvad & all major brands stocked</div>
@@ -1298,24 +1301,23 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
   </div>
 </footer>
 
-<!-- FLOATING PUMP SIDE WIDGET -->
-<div id="pumpWidget" class="pump-side-widget">
-  <div class="pump-side-tab" id="pumpWidgetTab">
-    <div class="pump-side-tab-icon">💧</div>
-    <div class="pump-side-tab-text">Find My Pump</div>
-  </div>
-  <div class="pump-side-panel">
-    <div class="pump-side-panel-inner">
-      <button class="pump-side-close" id="pumpWidgetClose" aria-label="Close">×</button>
-      <div class="psp-eyebrow">Smart Pump Guidance</div>
-      <div class="psp-title">Find the right<br>pump for you</div>
-      <div class="psp-steps">
-        <div class="psp-step"><div class="psp-dot"></div>Tell us your water source — borewell, openwell or surface</div>
-        <div class="psp-step"><div class="psp-dot"></div>Share depth, usage & discharge requirement</div>
-        <div class="psp-step"><div class="psp-dot"></div>Get your exact recommendation instantly</div>
-      </div>
-      <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="psp-cta">Start Guidance →</a>
+<!-- PUMP BOTTOM BANNER -->
+<div id="pumpBanner" class="pump-banner">
+  <div class="pump-banner-inner">
+    <!-- Impeller watermark -->
+    <div class="pump-banner-mark">
+      <svg width="72" height="72" viewBox="0 0 100 100" fill="currentColor"><g transform="translate(50,50)"><path d="M0,0 C-3,-10 -4,-22 4,-26 C12,-30 22,-18 18,-6 Z" transform="rotate(0)"/><path d="M0,0 C-3,-10 -4,-22 4,-26 C12,-30 22,-18 18,-6 Z" transform="rotate(72)"/><path d="M0,0 C-3,-10 -4,-22 4,-26 C12,-30 22,-18 18,-6 Z" transform="rotate(144)"/><path d="M0,0 C-3,-10 -4,-22 4,-26 C12,-30 22,-18 18,-6 Z" transform="rotate(216)"/><path d="M0,0 C-3,-10 -4,-22 4,-26 C12,-30 22,-18 18,-6 Z" transform="rotate(288)"/><circle r="6"/></g></svg>
     </div>
+    <!-- Water drop icon -->
+    <div class="pump-banner-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+    </div>
+    <div class="pump-banner-text">
+      <span class="pump-banner-label">Smart Pump Guidance · Aqua Group</span>
+      <span class="pump-banner-strong">Not sure which pump fits your need? Find your exact match in 2 minutes.</span>
+    </div>
+    <a href="https://smart-pump-selector.preview.emergentagent.com/" target="_blank" class="pump-banner-cta">Find My Pump →</a>
+    <button class="pump-banner-close" id="pumpBannerClose" aria-label="Dismiss">×</button>
   </div>
 </div>
 
@@ -1371,21 +1373,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 4000);
 });
 
-/* FLOATING PUMP SIDE WIDGET */
+/* PUMP BOTTOM BANNER */
 (function(){
-  var widget = document.getElementById('pumpWidget');
-  var tab    = document.getElementById('pumpWidgetTab');
-  var close  = document.getElementById('pumpWidgetClose');
-
-  // Auto-open after 6s if never dismissed this session
-  if (!sessionStorage.getItem('pumpWidgetDismissed')) {
-    setTimeout(function(){ widget.classList.add('open'); }, 6000);
+  var banner  = document.getElementById('pumpBanner');
+  var closeBtn = document.getElementById('pumpBannerClose');
+  if (!sessionStorage.getItem('pumpBannerClosed')) {
+    setTimeout(function(){ banner.classList.add('visible'); }, 4000);
   }
-  tab.addEventListener('click', function(){ widget.classList.toggle('open'); });
-  close.addEventListener('click', function(e){
-    e.stopPropagation();
-    widget.classList.remove('open');
-    sessionStorage.setItem('pumpWidgetDismissed','1');
+  closeBtn.addEventListener('click', function(){
+    banner.classList.remove('visible');
+    sessionStorage.setItem('pumpBannerClosed','1');
   });
 })();
 </script>
