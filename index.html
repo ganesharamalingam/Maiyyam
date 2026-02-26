@@ -674,8 +674,8 @@ body { font-family: 'Outfit', 'Open Sans', sans-serif; }
 .hero-digital { font-size: 12px; font-style: normal; font-weight: 500; color: var(--ink3); letter-spacing: 0.3px; margin-bottom: 28px; }
 
 /* ── SLIDER ── */
-.slider { width: 520px; height: 420px; border-radius: 0; box-shadow: 0 2px 28px rgba(0,0,0,.08); }
-.slides img { min-width: 520px; min-height: 420px; }
+.slider { width: 480px; height: 600px; border-radius: 0; box-shadow: 0 2px 28px rgba(0,0,0,.08); }
+#slideContainer > div img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ── SECTION HEADINGS ── */
 .sec-title { font-family: 'Outfit', sans-serif; font-size: clamp(28px,3.2vw,44px); font-weight: 800; font-style: normal; letter-spacing: -0.5px; line-height: 1.1; }
@@ -733,8 +733,7 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
 
 /* ── MOBILE HERO ── */
 @media (max-width: 768px) {
-  .slider { width: 100%; height: 280px; }
-  .slides img { min-width: 100%; min-height: 280px; }
+  .slider { width: 100%; height: 360px; }
   .hero-bg { padding: 110px 0 40px; }
   .row-container { padding: 0 20px; }
 }
@@ -750,14 +749,14 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
 .hero-headline em { color: var(--red); font-style: normal; }
 
 /* ── HTML SLIDE: Why Uzhavar Maiyyam ── */
-.slide-why { background: #f5f0e4; padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; }
-.sw-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--red); border: 1.5px solid var(--red); padding: 4px 10px; border-radius: 2px; margin-bottom: 16px; width: fit-content; }
-.sw-title { font-size: clamp(20px,2.8vw,28px); font-weight: 800; color: var(--ink); line-height: 1.1; margin-bottom: 18px; font-family: 'Outfit', sans-serif; }
+.slide-why { background: #f5f0e4; padding: 44px 40px; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; }
+.sw-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--red); border: 1.5px solid var(--red); padding: 4px 10px; border-radius: 2px; margin-bottom: 20px; width: fit-content; }
+.sw-title { font-size: clamp(22px,2.8vw,32px); font-weight: 800; color: var(--ink); line-height: 1.1; margin-bottom: 22px; font-family: 'Outfit', sans-serif; }
 .sw-title span { color: var(--red); }
-.sw-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
-.sw-list li { font-size: 13px; color: var(--ink2); display: flex; align-items: flex-start; gap: 9px; line-height: 1.45; }
-.sw-list li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--red); flex-shrink: 0; margin-top: 6px; }
-.sw-footer { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--ink3); border-top: 1px solid var(--border); padding-top: 14px; }
+.sw-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.sw-list li { font-size: 14px; color: var(--ink2); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+.sw-list li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--red); flex-shrink: 0; margin-top: 7px; }
+.sw-footer { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--ink3); border-top: 1px solid var(--border); padding-top: 16px; }
 
 /* ── HTML SLIDE: Pump Selector CTA ── */
 .slide-pump { background: linear-gradient(140deg, #0a3040 0%, #1a5568 60%, #0f4055 100%); padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; position: relative; overflow: hidden; }
@@ -770,18 +769,14 @@ footer { background: #fff; border-top: 2px solid var(--border); padding: 28px 8%
 .sp-cta:hover { background: var(--red-d); }
 .sp-drops { position: absolute; right: 24px; bottom: 20px; font-size: 26px; opacity: 0.15; letter-spacing: 4px; pointer-events: none; }
 
-/* ── SOL PANEL GRID LAYOUT — full-width image on top ── */
-.sol-panel-grid { display: flex; flex-direction: column; }
-.sol-panel-grid > div:last-child { order: -1; }
-.sol-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
-.sol-panel-img { width: 100%; height: 260px; object-fit: cover; border-radius: 4px; margin-bottom: 22px; display: block; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
-.acc-panel-grid { display: flex; flex-direction: column; }
-.acc-panel-grid > div:last-child { order: -1; }
-.acc-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 14px; }
+/* ── SOL PANEL CONTENT LAYOUT ── */
+.sol-panel-grid { display: block; }
+.sol-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 14px; }
+.acc-panel-grid { display: block; }
+.acc-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 14px; }
 @media (max-width:900px) {
   .sol-cols { grid-template-columns: 1fr; }
   .acc-cols { grid-template-columns: 1fr 1fr; }
-  .sol-panel-img { height: 180px; }
 }
 
 /* ── FOOTER RESTRUCTURED ── */
@@ -880,42 +875,23 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
             <div class="slides" id="slideContainer">
               <div class="active"><img src="Images/brand-1.jpg" alt="Water for farmers"></div>
               <div><img src="Images/brand-2.jpg" alt="Irrigation at work"></div>
-              <div><img src="Images/Slider1.jpg" alt="Uzhavar Maiyyam store"></div>
               <div><img src="Images/brand-3.jpg" alt="Pump solutions in the field"></div>
               <div><img src="Images/brand-4.jpg" alt="Agricultural water management"></div>
-              <div><img src="Images/Slider2.jpg" alt="Our product range"></div>
               <div><img src="Images/brand-5.jpg" alt="Sustainable farming"></div>
               <div><img src="Images/brand-6.jpg" alt="Complete water solutions"></div>
-              <div><img src="Images/Slider4.jpg" alt="Authorised dealer showroom"></div>
 
-            <!-- WHY UZHAVAR MAIYYAM slide -->
-            <div class="slide-why">
-              <div class="sw-badge">Est. 1966 · Thanjavur</div>
-              <h3 class="sw-title">Why <span>Uzhavar Maiyyam?</span></h3>
-              <ul class="sw-list">
-                <li>60+ years serving Thanjavur farmers, homes & institutions</li>
-                <li>Authorized Texmo & Aquatex dealer — genuine products only</li>
-                <li>Company-operated service centre — warranty stays intact</li>
-                <li>End-to-end: supply, installation, irrigation, solar & AMC</li>
-              </ul>
-              <div class="sw-footer">Gandhiji Salai · Thanjavur 613 001</div>
-            </div>
-
-            <!-- FIND YOUR PUMP slide -->
-            <div class="slide-pump">
-              <div class="sp-eyebrow">Smart Pump Guidance</div>
-              <h3 class="sp-title">Not sure which pump<br>fits your need?</h3>
-              <div class="sp-hints">
-                <div class="sp-hint"><div class="sp-hint-icon">💧</div> Tell us your water source — borewell, openwell or surface</div>
-                <div class="sp-hint"><div class="sp-hint-icon">📏</div> Share depth, usage and discharge requirement</div>
-                <div class="sp-hint"><div class="sp-hint-icon">✅</div> Get your exact pump recommendation instantly</div>
+              <!-- WHY UZHAVAR MAIYYAM slide -->
+              <div class="slide-why">
+                <div class="sw-badge">Est. 1966 · Thanjavur</div>
+                <h3 class="sw-title">Why <span>Uzhavar Maiyyam?</span></h3>
+                <ul class="sw-list">
+                  <li>60+ years serving Thanjavur farmers, homes & institutions</li>
+                  <li>Authorized Texmo & Aquatex dealer — genuine products only</li>
+                  <li>Company-operated service centre — warranty stays intact</li>
+                  <li>End-to-end: supply, installation, irrigation, solar & AMC</li>
+                </ul>
+                <div class="sw-footer">Gandhiji Salai · Thanjavur 613 001</div>
               </div>
-              <a href="https://catalog-intake-test.preview.emergentagent.com/" target="_blank" class="sp-cta">
-                Find My Pump
-                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-              <div class="sp-drops">💧💧💧</div>
-            </div>
 
             </div>
           </div>
@@ -1024,7 +1000,6 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
               </div>
             </div>
           </div>
-          <div><img src="Images/Prod- Agri.jpg" class="sol-panel-img" alt="Agriculture Solutions"></div>
         </div>
       </div>
       <!-- HOMES -->
@@ -1054,7 +1029,6 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
               </div>
             </div>
           </div>
-          <div><img src="Images/Prod- Home.jpg" class="sol-panel-img" alt="Home Solutions"></div>
         </div>
       </div>
       <!-- BUILDINGS -->
@@ -1083,7 +1057,6 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
               </div>
             </div>
           </div>
-          <div><img src="Images/Prod- Building.jpg" class="sol-panel-img" alt="Building Solutions"></div>
         </div>
       </div>
       <!-- SOLAR -->
@@ -1112,7 +1085,6 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
               </div>
             </div>
           </div>
-          <div><img src="Images/Prod- Solar.jpg" class="sol-panel-img" alt="Solar Solutions"></div>
         </div>
       </div>
       <!-- ACCESSORIES -->
@@ -1161,7 +1133,6 @@ footer { flex-direction: column; align-items: stretch; gap: 0; padding: 0 8%; }
               </div>
             </div>
           </div>
-          <div><img src="Images/Hero 3 Accessories.jpg" class="sol-panel-img" alt="Accessories & Fittings"></div>
         </div>
       </div>
     </div>
